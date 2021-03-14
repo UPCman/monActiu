@@ -1,0 +1,51 @@
+@import "../styles";
+
+.header {
+  height: 160px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: map-get($colors, grayText);
+  //font-family: 'Lato', sans-serif;
+  border-bottom: 1px solid map-get($colors, secondary);;
+
+  .logo {
+    margin-left: 2vw;
+    cursor: pointer;
+
+    img {
+      max-height: 100%;
+    }
+  }
+  :focus {
+    outline: none;
+  }
+
+  .titles {
+    margin: 4rem 2rem 0 0;
+    display: inline-flex;
+
+    .pages {
+      border-right: 1px solid map-get($colors, primary);
+      height: fit-content;
+
+      span {
+        margin-right: 2rem;
+        font-weight: 700;
+        cursor: pointer;
+
+        &.active {
+          font-weight: 900;
+          color: map-get($colors, primary);
+          border-bottom: 2px solid map-get($colors, secondary);
+          cursor: auto;
+        }
+      }
+      :focus {
+        outline: none;
+      }
+    }
+
+  }
+}

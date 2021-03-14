@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { TranslateService } from "@ngx-translate/core";
+import { TranslateService } from '@ngx-translate/core';
+import { Language, MainRoute } from './constants/global';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,12 @@ import { TranslateService } from "@ngx-translate/core";
 export class AppComponent {
   title = 'monActiu';
 
+  // To use enums on template
+  public MainRoute = MainRoute;
+
+
   constructor (private _translate: TranslateService) {
-    this._translate.setDefaultLang ("ca-es");
-    this._translate.use ("ca-es");
+    this._translate.setDefaultLang (Language.CATALAN);
+    this._translate.use (Language.CATALAN);
   }
 }

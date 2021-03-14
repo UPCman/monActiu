@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+// Tipologia lletra logo --> Segoe Script. Bold
+$colors: (
+  primary: #4cca07,
+  secondary: #a9e486,
+  darkText: #00171F,
+  grayText: #707070,
+);
+
+$sizes: (
+  xxxxl:  4rem,
+  xxxl:   3.1rem,
+  xxl:    2.1rem,
+  xl:     1.8rem,
+  l:      1.6rem,
+  m:      1.4rem,
+  s:      1.3rem,
+  xs:     1.2rem,
+  xxs:    1.1rem,
+  xxxs:   1rem,
+  xxxxs:  0.9rem,
+  xxxxxs: 0.8rem,
+  xxxxxxs: 0.6rem,
+  xxxxxxxs: 0.5rem
+);

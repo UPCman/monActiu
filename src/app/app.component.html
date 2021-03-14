@@ -1,6 +1,19 @@
 <div class="body">
   <div class="container">
-    <p>Mon Actiu</p>
+    <div class="header">
+      <div class="logo" [routerLink]=[MainRoute.HOME]>
+        <img src="../assets/img/logo.jpg">
+      </div>
+      <div class="titles">
+        <div class="pages">
+          <span class="active" [routerLink]=[MainRoute.ABOUT]>{{ 'about.title' | translate | uppercase }}</span>
+          <span [routerLink]=[MainRoute.TREATMENTS]>{{ 'treatments.title' | translate | uppercase }}</span>
+          <span [routerLink]=[MainRoute.FACILITIES]>{{ 'facilities.title' | translate | uppercase }}</span>
+          <span [routerLink]=[MainRoute.CONTACT]>{{ 'contact.title' | translate | uppercase }}</span>
+          <span [routerLink]=[MainRoute.PRICING]>{{ 'pricing.title' | translate | uppercase }}</span>
+        </div>
+      </div>
+    </div>
     <router-outlet></router-outlet>
   </div>
 </div>
