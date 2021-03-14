@@ -1,3 +1,63 @@
 {
-  "title": "Hola Mundo"
+  "home": {
+    "title": "¿En alguna ocasión has tenido?",
+    "pain": "Dolor",
+    "painSubtitle": "(articular, muscular, tendinós...)",
+    "articularLimitations": "Limitación articular",
+    "traumaticInjuries": "Lesión traumática y/o deportiva",
+    "traumaticInjuriesSubtitle": "(aguda/crónica)",
+    "limfaticEndema": "Edema linfático",
+    "nerveInjuries": "Lesiones del sistema nervios",
+    "nerveInjuriesSubtitle": "(ciática, túnel carpiano...)",
+    "others": "Entre muchas otras dolencias...",
+    "canHelp": "¡Te puedo ayudar!"
+  },
+  "about": {
+    "title": "¿Quién soy?",
+    "paragraph1": "Me llamo Judit Sánchez y soy graduada en Fisioterapia des del año 2015 por la Universidad de Lleida. Tengo más de 5 años de experiencia en el ámbito asistencial tratando y acompañando a mis pacientes en sus dolencias y lesiones. Mi objetivo principal es ayudarte a recobrar el estado de salud óptimo para que puedas disfrutar de una buena calidad de vida.",
+    "paragraph2": "Otro gran actor de mi trabajo son mis manos, a las que le estoy muy agradecida por su sensibilidad, fortaleza y resistencia durante mis tratamientos, no te defraudarán. ",
+    "paragraph3": "También decir que soy una persona muy activa y con mucha energía, me encanta la actividad física, es por eso que me gusta poder transmitir a mis pacientes la gran importancia de esta para la prevención de lesiones, el mantenimiento de la salud (tanto física como psíquica) y el bienestar general."
+  },
+  "treatments": {
+    "title": "Tratamientos",
+    "manualTherapy": "Terapia Manual",
+    "dryNeedling": "Punción Seca",
+    "lymphaticDrainage": "Drenaje limfàtic",
+    "electroTherapy": "Electroterapia",
+    "poseReeducation": "Reeducación Postural",
+    "fisioSport": "Fisioteràpia Deportiva",
+    "manualTherapyText": "Tratamiento de lesiones utilizando técnicas desarrolladas de forma manual como pueden ser masaje, movilización, estiramiento… ",
+    "dryNeedlingText": "Técnica invasiva con agujas que tiene como objetivo liberar contracturas y tensiones teniendo como objetivo los puntos gatillos musculares.",
+    "lymphaticDrainageText": "Masajes suaves y de baja intensidad que tienen como objetivo favorecer el retorno venoso con finalidad preventiva y de tratamiento para patologías del sistema nervioso.",
+    "electroTherapyText": "Técnica con finalidad antiálgica (reducción del dolor) para el tratamiento de dolor tanto agudo como crónico, la que se desarrolla mediante estímulos eléctricos controlados.",
+    "poseReeducationText": "Trabajo activo y consciente de corrección de la posición con diferentes ejercicios de refuerzos y conciencia. Estos son útiles para la extrapolación de esta correcta higiene postural a la vida cuotidiana y rectificar así hábitos nocivos para las estructuras corporales.",
+    "fisioSportText": "Tratamiento dirigido a esas dolencias que provienen de la práctica deportiva al igual que a la prevención de estas. Tales como: sobrecarga, ruptura fibrilar, distenciones musculares, esguinces, luxaciones..."
+  },
+  "facilities": {
+    "title": "Instalaciones",
+    "numerationText": "Les nostres instal·lacions consten de:",
+    "facility1": "Una entrada adaptada per a que puguis accedir al local amb total tranquil·litat.",
+    "facility2": "Una recepción amplia para cualquier información o duda que te pueda surgir.",
+    "facility3": "Una sala de rehabilitación bien equipada tanto con la maquinaria sanitaria correspondiente como el material funcional que necesitamos para tu recuperación, readaptación o prevención.",
+    "facility4": "Una cabina donde podrás relajarte y desconectar con nuestros tratamientos.",
+    "facility5": "Baños adaptados para todo el público.",
+    "paragraph2": "Por su disposición de puertas y ventanas el local garantiza una correcta ventilación, al igual que una ideal entrada de luz natural."
+  },
+  "contact": {
+    "title": "Contacto y Horario",
+    "subtitle": "Contacta con nosotros o visítanos: ",
+    "formTitle": "Pide información sin compromiso:",
+    "openHours": "Lunes – Viernes:  8:00 a 20:00",
+    "name": "Nombre",
+    "phoneNumber": "Nº Teléfono",
+    "email": "Correo electrónico",
+    "message": "Mensaje"
+  },
+  "pricing": {
+    "title": "Tarifas",
+    "session50": "Sesión de 50 min",
+    "session30": "Sesión de 50 min",
+    "season5": "Abonamiento 5 sesiones",
+    "season10": "Abonamiento 10 sesiones"
+  }
 }

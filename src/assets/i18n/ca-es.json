@@ -1,3 +1,63 @@
 {
-  "title": "Hola Mon"
+  "home": {
+    "title": "En alguna ocasió ha tingut?",
+    "pain": "Dolor",
+    "painSubtitle": "(articular, muscular, tendinoso...)",
+    "articularLimitations": "Limitació articular",
+    "traumaticInjuries": "Lesió traumàtica i/o esportiva",
+    "traumaticInjuriesSubtitle": "(aguda/crònica)",
+    "limfaticEndema": "Edema limfàtic",
+    "nerveInjuries": "Lesions del sistema nerviós",
+    "nerveInjuriesSubtitle": "(ciàtica, túnel carpià...)",
+    "others": "Entre moltes altres dolències...",
+    "canHelp": "Et puc ajudar!"
+  },
+  "about": {
+    "title": "Qui sóc?",
+    "paragraph1": "Em dic Judit Sánchez i sóc graduada en Fisioteràpia des de l’any 2015 per la Universitat de Lleida. Tinc més de 5 anys d’experiència en l’àmbit assistencial tractant i acompanyant als meus pacients en les seves dolències i lesions.  El meu objectiu principal es ajudar-te a recobrar l’estat de salut òptim per a que puguis gaudir de una bona qualitat de vida.",
+    "paragraph2": "Un altre gran actor de la meva feina son les meves mans, les quals els i estic molt agraïda de la da sensibilitat, fermesa i resistència que tenen al llarg dels meus tractaments, no et decebran.",
+    "paragraph3": "També cal dir que sóc una persona molt activa i amb molta energia, tanmateix m’encanta l’activitat física, és per això que m’agrada poder transmetre als meus pacients la gran importància que té aquesta per a la prevenció de lesions, el manteniment de la salut (tant física com psíquica) i el benestar general."
+  },
+  "treatments": {
+    "title": "Tractaments",
+    "manualTherapy": "Teràpia Manual",
+    "dryNeedling": "Punció Seca",
+    "lymphaticDrainage": "Drenatge limfàtic",
+    "electroTherapy": "Electroteràpia",
+    "poseReeducation": "Reeducació Postural",
+    "fisioSport": "Fisioteràpia Esportiva",
+    "manualTherapyText": "Tractament de lesions utilitzant tècniques desenvolupaves de forma manual com poden ser massatge, mobilització, estirament...",
+    "dryNeedlingText": "Técnica invasiva amb agulles que te l’objectiu d’alliberar contractures i tensions posant com a objectiu els punts gallet musculars.",
+    "lymphaticDrainageText": "Massatges suaus i de baixa intensitat que tenen com a objectiu afavorir el retorn venós prevenint i tractant patologies del sistema circulatori.",
+    "electroTherapyText": "Tècnica amb finalitat antiàlgica (reducció de dolor) per al tractament de dolor tant agut com crònic, la qual es desenvolupa a través d’estímuls elèctrics controlats.",
+    "poseReeducationText": "Treball actiu i conscient de correcció de la posició amb diferents exercicis de reforç i consciència. Aquests són útils per a l’extrapolació d’aquesta correcta higiene postural a la vida quotidiana i rectificar així hàbits nocius per a les estructures corporals.",
+    "fisioSportText": "Tractaments enfocats a aquelles dolències que provenen de la practica esportiva al igual que a la prevenció d’aquestes. Tals com: sobrecàrrega, ruptura fibril·lar, distensions musculars, esquinços, luxacions..."
+  },
+  "facilities": {
+    "title": "Instal·lacions",
+    "numerationText": "Nuestras instalaciones cuentan con:",
+    "facility1": "Una entrada adaptada para que puedas acceder al local con total tranquilidad.",
+    "facility2": "Una recepció amplia per a qualsevol informació o dubte que et pugui sorgir.",
+    "facility3": "Una sala de Rehabilitació ben equipada tant amb la maquinaria sanitària corresponent com amb el material funcional que necessitem per a la teva recuperació, readaptació o prevenció.",
+    "facility4": "Una cabina on podràs relaxar-te i desconnectar amb els nostres tractaments.",
+    "facility5": "Banys adaptats per a tot el públic.",
+    "paragraph2": "Per la disposició de portes i finestres el local garanteix una correcta ventilació al igual que una ideal entrada de llum natural."
+  },
+  "contact": {
+    "title": "Contacte i Horari",
+    "subtitle": "Contacta amb nosaltres o fes-nos una visita:",
+    "formTitle": "Demana informació sense compromís:",
+    "openHours": "Dilluns - Divendres: 8:00 a 20:00",
+    "name": "Nom",
+    "phoneNumber": "Nº Telèfon",
+    "email": "Correu electrònic",
+    "message": "Missatge"
+  },
+  "pricing": {
+    "title": "Tarifes",
+    "session50": "Sessió de 50 min",
+    "session30": "Sessió de 50 min",
+    "season5": "Abonament 5 sessions",
+    "season10": "Abonament 10 sessions"
+  }
 }
