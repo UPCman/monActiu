@@ -1,20 +1,34 @@
-<div class="body">
-  <div class="container">
+<div class="app">
     <div class="header">
       <div class="logo" [routerLink]=[MainRoute.HOME]>
-        <img src="../assets/img/logo.jpg">
+        <img src="../assets/img/smallLogo.jpg">
       </div>
       <div class="titles">
         <div class="pages">
-          <span class="active" [routerLink]=[MainRoute.ABOUT]>{{ 'about.title' | translate | uppercase }}</span>
-          <span [routerLink]=[MainRoute.TREATMENTS]>{{ 'treatments.title' | translate | uppercase }}</span>
-          <span [routerLink]=[MainRoute.FACILITIES]>{{ 'facilities.title' | translate | uppercase }}</span>
-          <span [routerLink]=[MainRoute.CONTACT]>{{ 'contact.title' | translate | uppercase }}</span>
-          <span [routerLink]=[MainRoute.PRICING]>{{ 'pricing.title' | translate | uppercase }}</span>
+          <span [ngClass]="{'active': activeRoute === MainRoute.ABOUT }" [routerLink]=[MainRoute.ABOUT]>{{ 'about.title' | translate | uppercase }}</span>
+          <span [ngClass]="{'active': activeRoute === MainRoute.TREATMENTS }" [routerLink]=[MainRoute.TREATMENTS]>{{ 'treatments.title' | translate | uppercase }}</span>
+          <span [ngClass]="{'active': activeRoute === MainRoute.FACILITIES }" [routerLink]=[MainRoute.FACILITIES]>{{ 'facilities.title' | translate | uppercase }}</span>
+          <span [ngClass]="{'active': activeRoute === MainRoute.CONTACT }" [routerLink]=[MainRoute.CONTACT]>{{ 'contact.title' | translate | uppercase }}</span>
+          <span [ngClass]="{'active': activeRoute === MainRoute.PRICING }" [routerLink]=[MainRoute.PRICING]>{{ 'pricing.title' | translate | uppercase }}</span>
         </div>
-      </div>
+        <div class="language">
+          <div class="current" (click)="toggleOptions()">{{ ('languages.short.' + language) | translate }}</div>
+          <div class="options" *ngIf="showLanguage">
+            <div>
+              <p (click)="selectLanguage(Language.CATALAN)">
+                {{ 'languages.ca-es' | translate }}
+              </p>
+              <p (click)="selectLanguage(Language.SPANISH)">
+                {{ 'languages.es-es' | translate }}
+              </p>
+            </div>
+
+          </div>
+
+        </div>
     </div>
+  </div>
+  <div class="body">
     <router-outlet></router-outlet>
   </div>
 </div>
-

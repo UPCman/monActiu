@@ -1,0 +1,24 @@
+.about {
+  width: 100vw;
+
+  .container {
+    padding: 1rem 6rem;
+
+    .description-container {
+      margin-top: 1rem;
+      width: 100%;
+      display: flex;
+
+      img {
+        max-width: 300px;
+        max-height: 459px;
+      }
+
+      .description {
+        width: 100%;
+        padding: 0 2rem;
+        text-align: justify
+      }
+    }
+  }
+}

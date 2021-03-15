@@ -23,3 +23,25 @@ $sizes: (
   xxxxxxs: 0.6rem,
   xxxxxxxs: 0.5rem
 );
+
+body {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-size: map-get($sizes, xxxl);
+  color: map-get($colors, primary);
+}
+
+.text {
+  font-size: map-get($sizes, l);
+  color: map-get($colors, grayText);
+  text-align: justify
+}
+

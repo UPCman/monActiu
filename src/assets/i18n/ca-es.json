@@ -59,5 +59,13 @@
     "session30": "Sessió de 50 min",
     "season5": "Abonament 5 sessions",
     "season10": "Abonament 10 sessions"
+  },
+  "languages": {
+    "ca-es": "CATALÀ",
+    "es-es": "ESPANYOL",
+    "short": {
+      "ca-es": "CAT",
+      "es-es": "ESP"
+    }
   }
 }
