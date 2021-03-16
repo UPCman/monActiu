@@ -1,7 +1,7 @@
 @import "../styles";
 
 .app {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   //overflow: hidden;
 }
@@ -13,8 +13,8 @@
   flex-direction: row;
   justify-content: space-between;
   color: map-get($colors, grayText);
-  //font-family: 'Lato', sans-serif;
-  border-bottom: 1px solid map-get($colors, secondary);
+  font-family: "Helvetica", sans-serif;
+  border-bottom: 1px solid map-get($colors, primary);
 
   .logo {
     max-width: 50%;
@@ -91,7 +91,22 @@
   }
 }
 
-.body {
+.main-container {
   width: 100%;
   height: 100%;
+  background-color: map-get($colors, brightGreen);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-family: "Helvetica", sans-serif;
+
+  p {
+    margin: 7px 2rem 0 1vw;
+  }
 }
