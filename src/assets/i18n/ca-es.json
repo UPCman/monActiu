@@ -51,7 +51,8 @@
     "name": "Nom",
     "phoneNumber": "Nº Telèfon",
     "email": "Correu electrònic",
-    "message": "Missatge"
+    "message": "Missatge",
+    "send": "Enviar"
   },
   "pricing": {
     "title": "Tarifes",

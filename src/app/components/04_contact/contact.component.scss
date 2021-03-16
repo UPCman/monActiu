@@ -1,0 +1,101 @@
+@import "../../../styles";
+
+.contact {
+  width: 100%;
+  height: 100%;
+
+  .container {
+    padding: 2rem 6rem;
+    height: 100%;
+
+    .title {
+      //color: map-get($colors, grayText);
+    }
+
+    .description-container {
+      margin-top: 2rem;
+      width: 100%;
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+
+      .description {
+        width: 100%;
+        margin: 1rem 0;
+        padding: 0 2rem;
+
+        .text {
+          //color: white;
+        }
+
+        .bold {
+          color: map-get($colors, primary);
+          font-weight: bold;
+        }
+      }
+    }
+
+    .form-container {
+      margin-top: 2rem;
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+
+      .contact-form {
+        width: 100%;
+        margin: 1rem 0;
+        padding: 0 2rem;
+        text-align: center;
+        .text {
+          //color: white;
+        }
+
+        .bold {
+          color: map-get($colors, primary);
+          font-weight: bold;
+        }
+
+        input {
+          width: 80%;
+          border-radius: 5px;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid map-get($colors, primary);
+          font-size: map-get($sizes, s);
+          color: map-get($colors, grayText);
+          font-family: "Helvetica", sans-serif;
+        }
+
+        textarea {
+          width: 80%;
+          border-radius: 5px;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid map-get($colors, primary);
+          font-size: map-get($sizes, s);
+          color: map-get($colors, grayText);
+          font-family: "Helvetica", sans-serif;
+          resize: none;
+          rows: 4;
+        }
+
+        button {
+          cursor: pointer;
+          width: 50%;
+          border-radius: 5px;
+          padding: 10px;
+          border: none;
+          font-size: map-get($sizes, s);
+          background-color: map-get($colors, primary);
+          color: white;
+          font-family: "Helvetica", sans-serif;
+          font-weight: bold;
+        }
+        button:disabled {
+          background-color: map-get($colors, brightGreen);
+          cursor: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,1 +1,40 @@
-CONTACT
+<div class="contact">
+  <div class="container">
+    <div class="title-container>">
+      <b class="title">{{ "contact.title" | translate}}</b>
+    </div>
+    <div class="description-container">
+      <div class="description">
+        <p>
+          <span class="text bold">{{ "contact.subtitle" | translate}}</span>
+        </p>
+        <p (click)="openWhatsapp()">
+          <span class="text">{{ CONTACT_PHONE }}</span>
+        </p>
+        <p>
+          <span class="text">{{ CONTACT_EMAIL }}</span>
+        </p>
+        <p>
+          <span class="text">{{ CONTACT_ADDRESS }}</span>
+        </p>
+        <p>
+          <span class="text">{{ "contact.openHours" | translate}}</span>
+        </p>
+      </div>
+    </div>
+    <div class="form-container">
+      <div class="contact-form">
+        <p>
+          <span class="text bold">{{ "contact.formTitle" | translate}} </span>
+        </p>
+        <form [formGroup]="contactForm">
+          <input formControlName="name" type="text" placeholder="{{ 'contact.name'| translate }}">
+          <input formControlName="phone" type="text" placeholder="{{ 'contact.phoneNumber'| translate }}">
+          <input formControlName="email" type="email" placeholder="{{ 'contact.email'| translate }}">
+          <textarea formControlName="message" rows="4" type="text" placeholder="{{ 'contact.message'| translate }}"></textarea>
+        </form>
+        <button (click)="sendEmail()" [disabled]="!contactForm.valid">{{ 'contact.send'| translate }}</button>
+      </div>
+    </div>
+  </div>
+</div>

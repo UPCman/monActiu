@@ -47,11 +47,12 @@
     "title": "Contacto y Horario",
     "subtitle": "Contacta con nosotros o visítanos: ",
     "formTitle": "Pide información sin compromiso:",
-    "openHours": "Lunes – Viernes:  8:00 a 20:00",
+    "openHours": "Lunes - Viernes:  8:00 a 20:00",
     "name": "Nombre",
     "phoneNumber": "Nº Teléfono",
     "email": "Correo electrónico",
-    "message": "Mensaje"
+    "message": "Mensaje",
+    "send": "Enviar"
   },
   "pricing": {
     "title": "Tarifas",
