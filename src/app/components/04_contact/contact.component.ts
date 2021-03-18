@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { CONTACT_PHONE, CONTACT_ADDRESS, CONTACT_EMAIL } from '../../constants/global';
+import { CONTACT_PHONE, CONTACT_ADDRESS, CONTACT_EMAIL, FULL_CONTACT_PHONE } from '../../constants/global';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -19,6 +19,10 @@ export class ContactComponent {
   // contactForm: contact form
   public contactForm: FormGroup;
 
+  // Google maps configuration
+  public center = { lat: 24, lng: 12 };
+  public zoom: number = 15;
+
   constructor (private _http: HttpClient, private _formBuilder: FormBuilder) {
 
     this.contactForm = this._formBuilder.group ({
@@ -34,7 +38,8 @@ export class ContactComponent {
   }
 
   public openWhatsapp () {
-    window.document.location.href = 'https://api.whatsapp.com/send?phone=' + CONTACT_PHONE;
+    //window.document.location.href = 'https://api.whatsapp.com/send?phone=' + CONTACT_PHONE;
+    window.open ('https://web.whatsapp.com/send?phone=' + FULL_CONTACT_PHONE, '_blank');
   }
 
   public sendEmail () {

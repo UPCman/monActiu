@@ -3,26 +3,26 @@
     <div class="title-container>">
       <b class="title">{{ "contact.title" | translate}}</b>
     </div>
-    <div class="description-container">
+    <div class="form-container">
       <div class="description">
         <p>
           <span class="text bold">{{ "contact.subtitle" | translate}}</span>
         </p>
-        <p (click)="openWhatsapp()">
-          <span class="text">{{ CONTACT_PHONE }}</span>
-        </p>
-        <p>
-          <span class="text">{{ CONTACT_EMAIL }}</span>
-        </p>
-        <p>
-          <span class="text">{{ CONTACT_ADDRESS }}</span>
-        </p>
-        <p>
-          <span class="text">{{ "contact.openHours" | translate}}</span>
-        </p>
+        <div class="fields-container">
+          <p (click)="openWhatsapp()">
+            <span class="text">{{ CONTACT_PHONE }}</span>
+          </p>
+          <p>
+            <span class="text">{{ CONTACT_EMAIL }}</span>
+          </p>
+          <p>
+            <span class="text">{{ CONTACT_ADDRESS }}</span>
+          </p>
+          <p>
+            <span class="text">{{ "contact.openHours" | translate}}</span>
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="form-container">
       <div class="contact-form">
         <p>
           <span class="text bold">{{ "contact.formTitle" | translate}} </span>
@@ -37,4 +37,9 @@
       </div>
     </div>
   </div>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1260.1747771802677!2d2.001571224018304!3d41.304129136465505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49cd8ba636603%3A0xa50093bdf2de3707!2sCarrer%20de%20Sant%20Joan%2C%204%2C%2008850%20Gav%C3%A0%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1616032442747!5m2!1ses!2ses"
+    width="100%" height="450"
+    style="border:0;" allowfullscreen="" loading="lazy">
+  </iframe>
 </div>

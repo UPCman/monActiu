@@ -3,26 +3,40 @@
 .contact {
   width: 100%;
   height: 100%;
+  overflow: scroll;
+
+  iframe {
+    margin-bottom: 230px;
+  }
 
   .container {
-    padding: 2rem 6rem;
-    height: 100%;
+    padding: 2rem 0;
+    //height: 100%;
 
     .title {
+      padding: 0 6rem;
       //color: map-get($colors, grayText);
     }
 
-    .description-container {
+    .form-container {
       margin-top: 2rem;
       width: 100%;
       display: flex;
+      //align-items: center;
+      justify-content: center;
       background-color: white;
-      border-radius: 10px;
 
       .description {
         width: 100%;
         margin: 1rem 0;
-        padding: 0 2rem;
+        padding-left:  2rem;
+        min-width: 500px;
+        max-width: 750px;
+
+        .fields-container {
+          padding: 1rem 0;
+          height: 100%;
+        }
 
         .text {
           //color: white;
@@ -33,18 +47,13 @@
           font-weight: bold;
         }
       }
-    }
-
-    .form-container {
-      margin-top: 2rem;
-      display: flex;
-      background-color: white;
-      border-radius: 10px;
 
       .contact-form {
         width: 100%;
+        max-width: 750px;
+        min-width: 500px;
         margin: 1rem 0;
-        padding: 0 2rem;
+        padding-right: 2rem;
         text-align: center;
         .text {
           //color: white;
@@ -92,7 +101,7 @@
           font-weight: bold;
         }
         button:disabled {
-          background-color: map-get($colors, brightGreen);
+          background-color: map-get($colors, backgroundGreen1);
           cursor: auto;
         }
       }
