@@ -112,13 +112,54 @@
 .footer {
   position: absolute;
   bottom: 0;
-  height: 30px;
+  height: 40px;
   width: 100%;
   background-color: black;
   color: white;
   font-family: "Helvetica", sans-serif;
+  display: flex;
+  align-items: center;
 
-  p {
-    margin: 7px 2rem 0 1vw;
+  .icons {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+
+    i {
+      cursor: pointer;
+      margin-right: 20px;
+      font-size: map-get($sizes, l);
+      -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+
+      &:hover {
+        font-size: map-get($sizes, xl);
+        color: map-get($colors, primary);
+      }
+    }
+  }
+
+  .footer-text {
+    width: 100%;
+    text-align: end;
+    margin-right: 20px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    p {
+      text-align: end;
+      font-size: map-get($sizes, xxxs);
+      margin-left: 10px;
+    }
+
+    i {
+      font-size: map-get($sizes, xxs);
+    }
   }
 }

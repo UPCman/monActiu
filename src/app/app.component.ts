@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Language, MainRoute } from './constants/global';
+import { FULL_CONTACT_PHONE, Language, MainRoute } from './constants/global';
 import { Router } from '@angular/router';
 
 @Component({
@@ -47,4 +47,13 @@ export class AppComponent {
     this._translate.use (language);
   }
 
+  public openWhatsapp () {
+    //window.document.location.href = 'https://api.whatsapp.com/send?phone=' + CONTACT_PHONE;
+    window.open ('https://web.whatsapp.com/send?phone=' + FULL_CONTACT_PHONE, '_blank');
+  }
+
+  public openInstagram () {
+    //window.document.location.href = 'https://api.whatsapp.com/send?phone=' + CONTACT_PHONE;
+    window.open ('https://www.instagram.com/juditsanchezcentelles/', '_blank');
+  }
 }
