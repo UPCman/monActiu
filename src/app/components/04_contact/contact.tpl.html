@@ -9,18 +9,22 @@
           <span class="text bold">{{ "contact.subtitle" | translate}}</span>
         </p>
         <div class="fields-container">
-          <p (click)="openWhatsapp()">
+          <div class="clickable field" (click)="openWhatsapp()">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
             <span class="text">{{ CONTACT_PHONE }}</span>
-          </p>
-          <p>
+          </div>
+          <div class="field">
+            <i class="far fa-envelope" aria-hidden="true"></i>
             <span class="text">{{ CONTACT_EMAIL }}</span>
-          </p>
-          <p>
+          </div>
+          <div class="field">
+            <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
             <span class="text">{{ CONTACT_ADDRESS }}</span>
-          </p>
-          <p>
+          </div>
+          <div class="field">
+            <i class="far fa-clock" aria-hidden="true"></i>
             <span class="text">{{ "contact.openHours" | translate}}</span>
-          </p>
+          </div>
         </div>
       </div>
       <div class="contact-form">

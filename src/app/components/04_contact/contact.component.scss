@@ -5,10 +5,6 @@
   height: 100%;
   overflow: scroll;
 
-  iframe {
-    margin-bottom: 230px;
-  }
-
   .container {
     padding: 2rem 0;
     //height: 100%;
@@ -36,6 +32,44 @@
         .fields-container {
           padding: 1rem 0;
           height: 100%;
+
+          .clickable {
+            cursor: pointer;
+
+            span, i {
+              font-size: map-get($sizes, l);
+              -webkit-transition: all .5s ease;
+              -moz-transition: all .5s ease;
+              -o-transition: all .5s ease;
+              transition: all .5s ease;
+            }
+          }
+
+          .field {
+            height: 50px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+
+            i {
+              color: map-get($colors, grayText);
+              font-size: map-get($sizes, l);
+              margin-right: 10px;
+              width: 30px;
+            }
+          }
+
+          .clickable:hover {
+            span, i {
+              font-size: map-get($sizes, xl);
+              color: map-get($colors, primary);
+            }
+          }
+        }
+
+        .material-icons {
+          color: map-get($colors, grayText);
+          margin-right: 10px;
         }
 
         .text {
@@ -69,10 +103,18 @@
           border-radius: 5px;
           padding: 10px;
           margin-bottom: 10px;
-          border: 1px solid map-get($colors, primary);
+          border: 1px solid map-get($colors, backgroundGreen1);
           font-size: map-get($sizes, s);
           color: map-get($colors, grayText);
           font-family: "Helvetica", sans-serif;
+
+          ~:invalid {
+            border-color: red;
+          }
+
+          ~:focus {
+            border-color: map-get($colors, backgroundGreen1);
+          }
         }
 
         textarea {
@@ -80,7 +122,7 @@
           border-radius: 5px;
           padding: 10px;
           margin-bottom: 10px;
-          border: 1px solid map-get($colors, primary);
+          border: 1px solid map-get($colors, backgroundGreen1);
           font-size: map-get($sizes, s);
           color: map-get($colors, grayText);
           font-family: "Helvetica", sans-serif;

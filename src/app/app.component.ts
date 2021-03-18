@@ -9,8 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  // showLanguage: Indicates if language options must be shown
-  public showLanguage: boolean = false;
 
   // To use enums on template
   public MainRoute = MainRoute;
@@ -22,6 +20,9 @@ export class AppComponent {
   // activeRoute: current route
   public activeRoute: MainRoute = null;
 
+  // isLanguageSelectorOpen: To manage language selector logic
+  public isLanguageSelectorOpen: boolean = false;
+
   constructor (private _translate: TranslateService,
                private _router: Router) {
     this._translate.setDefaultLang (this.language);
@@ -29,6 +30,7 @@ export class AppComponent {
 
     this._router.events.subscribe ((val: any) => {
       if (val.hasOwnProperty ('url')) {
+        this.isLanguageSelectorOpen = false;
         this.activeRoute = val.url.replace ('/', '');
         // console.log ("[AppComponent] Route:", val.url);
       }
@@ -36,11 +38,11 @@ export class AppComponent {
   }
 
   public toggleOptions () {
-    this.showLanguage = !this.showLanguage;
+    this.isLanguageSelectorOpen = !this.isLanguageSelectorOpen;
   }
 
   public selectLanguage (language: Language) {
-    this.showLanguage = false;
+    this.isLanguageSelectorOpen = false;
     this.language = language;
     this._translate.use (language);
   }

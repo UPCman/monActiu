@@ -12,8 +12,12 @@
           <span [ngClass]="{'active': activeRoute === MainRoute.PRICING }" [routerLink]=[MainRoute.PRICING]>{{ 'pricing.title' | translate | uppercase }}</span>
         </div>
         <div class="language">
-          <div class="current" (click)="toggleOptions()">{{ ('languages.short.' + language) | translate }}</div>
-          <div class="options" *ngIf="showLanguage">
+          <div class="current-language" (click)="toggleOptions()">
+            {{ ('languages.short.' + language) | translate }}
+            <i *ngIf="isLanguageSelectorOpen" class="fas fa-chevron-up" aria-hidden="true"></i>
+            <i *ngIf="!isLanguageSelectorOpen" class="fas fa-chevron-down" aria-hidden="true"></i>
+          </div>
+          <div class="options" *ngIf="isLanguageSelectorOpen">
             <div>
               <p (click)="selectLanguage(Language.CATALAN)">
                 {{ 'languages.ca-es' | translate }}

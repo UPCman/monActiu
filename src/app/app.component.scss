@@ -3,7 +3,7 @@
 .app {
   width: 100vw;
   height: 100vh;
-  //overflow: hidden;
+  overflow: hidden;
 }
 
 .header {
@@ -23,6 +23,9 @@
 
     img {
       max-height: 100%;
+    }
+    &:hover {
+      filter: grayscale(60%);
     }
   }
   :focus {
@@ -48,6 +51,10 @@
           border-bottom: 2px solid map-get($colors, secondary);
           cursor: auto;
         }
+
+        &:hover {
+          color: map-get($colors, secondary);
+        }
       }
       :focus {
         outline: none;
@@ -61,18 +68,18 @@
       cursor: pointer;
       z-index: 9999;
 
-      .current {
+      .current-language {
         font-weight: bold;
         padding-right: 3rem;
+        min-width: 60px;
+        display: flex;
 
-        img {
-          padding: 0 0 0.3rem 1rem;
-          cursor: pointer;
+        i {
+          margin-left: 6px;
+        }
 
-          &.rotate {
-            transform: rotate(180deg);
-            padding: 0.3rem 1rem 0 0;
-          }
+        &:hover {
+          color: map-get($colors, secondary);
         }
       }
 
@@ -84,6 +91,10 @@
         background-color: map-get($colors, primary);
         font-weight: 900;
         border-radius: 0 0 10px 10px;
+        p:hover {
+          color: map-get($colors, backgroundGreen2);
+
+        }
       }
     }
 
@@ -93,8 +104,9 @@
 
 .main-container {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 160px);
   background-color: map-get($colors, backgroundGreen1);
+  margin-bottom: 30px;
 }
 
 .footer {
