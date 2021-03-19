@@ -1,0 +1,69 @@
+@import "../../../styles";
+
+.facilities {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+
+  .container {
+    padding: 2rem 6rem;
+    height: 100%;
+
+    .title {
+      //color: map-get($colors, grayText);
+    }
+
+    .description-container {
+      margin-top: 2rem;
+      width: 100%;
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+
+      .description {
+        width: 100%;
+        padding: 0 2rem;
+        text-align: justify;
+
+        .text {
+          //color: white;
+        }
+      }
+
+      .table {
+        width: 100%;
+        padding: 2rem;
+        text-align: center;
+        .text {
+          //color: white;
+        }
+
+        .bold {
+          font-weight: bold;
+        }
+
+        .text {
+          font-size: map-get($sizes, xl);
+          color: map-get($colors, grayText);
+        }
+
+        td {
+          padding: 10px;
+        }
+      }
+    }
+    .subtitle-container {
+      width: 100%;
+      text-align: justify;
+      margin-top: 2rem;
+      margin-bottom: 6rem;
+
+      .subtitle {
+        font-size: map-get($sizes, xl);
+        color: map-get($colors, primary);
+        font-family: "Helvetica", sans-serif;
+      }
+    }
+
+  }
+}

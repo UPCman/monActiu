@@ -1,0 +1,57 @@
+@import "../../../styles";
+
+.pricing {
+  width: 100%;
+  height: 100%;
+
+  .container {
+    padding: 2rem 0;
+    height: 100%;
+
+    .title-container {
+      margin-top: 2rem;
+      padding: 2rem 6rem;
+    }
+
+    .title {
+      padding: 0 6rem;
+    }
+
+    .description-container {
+      margin-top: 2rem;
+      width: 100%;
+      display: flex;
+      background-color: white;
+      justify-content: center;
+
+      .table {
+        width: 600px;
+        padding: 2rem;
+        text-align: center;
+        .text {
+          //color: white;
+        }
+
+        .bold {
+          font-weight: bold;
+        }
+
+        .text {
+          font-size: map-get($sizes, xl);
+          color: map-get($colors, grayText);
+        }
+
+        td {
+          padding: 10px;
+          width: 60%;
+          text-align: start;
+
+          &.price {
+            text-align: end;
+            width: 40%;
+          }
+        }
+      }
+    }
+  }
+}

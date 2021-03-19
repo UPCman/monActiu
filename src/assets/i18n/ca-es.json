@@ -35,7 +35,7 @@
   },
   "facilities": {
     "title": "Instal·lacions",
-    "numerationText": "Nuestras instalaciones cuentan con:",
+    "numerationText": "Les nostres instal·lacions consten de:",
     "facility1": "Una entrada adaptada para que puedas acceder al local con total tranquilidad.",
     "facility2": "Una recepció amplia per a qualsevol informació o dubte que et pugui sorgir.",
     "facility3": "Una sala de Rehabilitació ben equipada tant amb la maquinaria sanitària corresponent com amb el material funcional que necessitem per a la teva recuperació, readaptació o prevenció.",
@@ -57,7 +57,7 @@
   "pricing": {
     "title": "Tarifes",
     "session50": "Sessió de 50 min",
-    "session30": "Sessió de 50 min",
+    "session30": "Sessió de 30 min",
     "season5": "Abonament 5 sessions",
     "season10": "Abonament 10 sessions"
   },
