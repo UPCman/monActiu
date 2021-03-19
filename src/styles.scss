@@ -6,9 +6,7 @@ $colors: (
   backgroundGreen1: #e3ebc2,
   backgroundGreen2: #cde376,
   dgreen: #3fa706,
-  darkText: #00171F,
   grayText: #707070,
-  dgray: #515151,
 );
 
 $sizes: (
@@ -38,7 +36,7 @@ html, body {
 
 .title {
   font-size: map-get($sizes, xxxl);
-  color: map-get($colors, primary);
+  color: map-get($colors, grayText);
   font-family: "Helvetica", sans-serif;
 }
 

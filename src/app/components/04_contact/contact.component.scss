@@ -10,8 +10,12 @@
     //height: 100%;
 
     .title {
-      padding: 0 6rem;
-      //color: map-get($colors, grayText);
+      margin-left: 6rem;
+      background-color: map-get($colors, primary);
+      padding: 60px;
+      border-radius: 0 0 10px 10px;
+      color: white;
+      opacity: 0.5;
     }
 
     .form-container {
@@ -20,7 +24,7 @@
       display: flex;
       //align-items: center;
       justify-content: center;
-      background-color: white;
+      background-color: map-get($colors, backgroundGreen1);
 
       .description {
         width: 100%;
@@ -77,7 +81,7 @@
         }
 
         .bold {
-          color: map-get($colors, primary);
+          //color: map-get($colors, primary);
           font-weight: bold;
         }
       }
@@ -94,7 +98,7 @@
         }
 
         .bold {
-          color: map-get($colors, primary);
+          //color: map-get($colors, primary);
           font-weight: bold;
         }
 
@@ -103,7 +107,7 @@
           border-radius: 5px;
           padding: 10px;
           margin-bottom: 10px;
-          border: 1px solid map-get($colors, backgroundGreen1);
+          border: 1px solid map-get($colors, backgroundGreen2);
           font-size: map-get($sizes, s);
           color: map-get($colors, grayText);
           font-family: "Helvetica", sans-serif;
@@ -122,7 +126,7 @@
           border-radius: 5px;
           padding: 10px;
           margin-bottom: 10px;
-          border: 1px solid map-get($colors, backgroundGreen1);
+          border: 1px solid map-get($colors, backgroundGreen2);
           font-size: map-get($sizes, s);
           color: map-get($colors, grayText);
           font-family: "Helvetica", sans-serif;
@@ -143,7 +147,7 @@
           font-weight: bold;
 
           &:disabled {
-            background-color: map-get($colors, backgroundGreen1);
+            background-color: map-get($colors, backgroundGreen2);
             cursor: auto;
           }
         }

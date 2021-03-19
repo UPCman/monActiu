@@ -3,10 +3,10 @@
 .pricing {
   width: 100%;
   height: 100%;
+  overflow: auto;
 
   .container {
     padding: 2rem 0;
-    height: 100%;
 
     .title-container {
       margin-top: 2rem;
@@ -14,14 +14,19 @@
     }
 
     .title {
-      padding: 0 6rem;
+      margin-left: 6rem;
+      background-color: map-get($colors, primary);
+      padding: 60px;
+      border-radius: 0 0 10px 10px;
+      color: white;
+      opacity: 0.5;
     }
 
     .description-container {
       margin-top: 2rem;
       width: 100%;
       display: flex;
-      background-color: white;
+      background-color: map-get($colors, backgroundGreen1);
       justify-content: center;
 
       .table {

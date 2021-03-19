@@ -3,41 +3,56 @@
 .about {
   width: 100%;
   height: 100%;
+  overflow: auto;
 
   .container {
     padding: 2rem 6rem;
-    height: 100%;
+    //height: 100%;
+    justify-content: center;
+    align-items: center;
 
     .title {
-      //color: map-get($colors, grayText);
+      background-color: map-get($colors, primary);
+      padding: 60px;
+      border-radius: 0 0 10px 10px;
+      color: white;
+      opacity: 0.5;
+    }
+
+    .bio {
+      display: flex;
+      justify-content: center;
     }
 
     .description-container {
       margin-top: 2rem;
-      width: 100%;
+      width: 90%;
       display: flex;
-      background-color: white;
+      background-color: map-get($colors, backgroundGreen1);
       border-radius: 10px;
-      max-height: 459px;
-      //border: 1px solid map-get($colors, primary);
-      ::-webkit-scrollbar {
-        display: none;
-      }
+      align-items: center;
+      justify-content: center;
 
       img {
+        float: left;
         max-width: 300px;
         max-height: 459px;
         border-radius: 10px 0 0 10px;
+        margin-right: 30px;
       }
 
       .description {
         width: 100%;
-        padding: 0 2rem;
         text-align: justify;
-        overflow-y: scroll;
+        margin-right: 30px;
+        align-items: center;
+        justify-content: center;
 
         .text {
           //color: white;
+          padding: 1rem;
+          margin-left: 30px;
+          margin-top: 30px;
         }
       }
     }

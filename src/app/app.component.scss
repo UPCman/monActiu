@@ -93,7 +93,6 @@
         border-radius: 0 0 10px 10px;
         p:hover {
           color: map-get($colors, backgroundGreen2);
-
         }
       }
     }
@@ -105,7 +104,7 @@
 .main-container {
   width: 100%;
   height: calc(100% - 160px);
-  background-color: map-get($colors, backgroundGreen1);
+  background-color: map-get($colors, backgroundGreen2);
   margin-bottom: 30px;
 }
 
