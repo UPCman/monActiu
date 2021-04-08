@@ -97,12 +97,17 @@ html, body {
 }
 
 .theme-dialog  {
-  padding: 50px;
+  padding: 20px;
   background-color: white;
   border-radius: 15px;
 
   .mat-dialog-container {
     box-shadow: none;
+
+    p {
+      text-align: center;
+      line-height: normal;
+    }
   }
 }
 
