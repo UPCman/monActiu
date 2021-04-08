@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { FULL_CONTACT_PHONE, Language, MainRoute } from './constants/global';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { UnderConstructionDialog } from './components/dialogs/under_construction/under_construction_dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  // Close Under close dialog on press 'C'
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    if(event.keyCode === 67 && this._underConstructionDialogRef !== null) {
+      this._underConstructionDialogRef.close();
+    }
+  }
 
   // To use enums on template
   public MainRoute = MainRoute;
@@ -23,8 +32,12 @@ export class AppComponent {
   // isLanguageSelectorOpen: To manage language selector logic
   public isLanguageSelectorOpen: boolean = false;
 
+  // underConstructionDialogRef: Under construction dialog reference
+  private _underConstructionDialogRef = null;
+
   constructor (private _translate: TranslateService,
-               private _router: Router) {
+               private _router: Router,
+               private _dialog: MatDialog) {
     this._translate.setDefaultLang (this.language);
     this._translate.use (this.language);
 
@@ -35,6 +48,9 @@ export class AppComponent {
         // console.log ("[AppComponent] Route:", val.url);
       }
     });
+
+    // Open under construction dialog
+    this.openUnderConstructionDialog();
   }
 
   public toggleOptions () {
@@ -55,5 +71,12 @@ export class AppComponent {
   public openInstagram () {
     //window.document.location.href = 'https://api.whatsapp.com/send?phone=' + CONTACT_PHONE;
     window.open ('https://www.instagram.com/juditsanchezcentelles/', '_blank');
+  }
+
+  public openUnderConstructionDialog () {
+    this._underConstructionDialogRef = this._dialog.open (UnderConstructionDialog, {
+      panelClass: 'theme-dialog',
+      disableClose: true
+    });
   }
 }

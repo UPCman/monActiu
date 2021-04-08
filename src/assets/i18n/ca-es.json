@@ -68,5 +68,8 @@
       "ca-es": "CAT",
       "es-es": "ESP"
     }
+  },
+  "under_construction_dialog": {
+    "message": "Pàgina en construcció"
   }
 }

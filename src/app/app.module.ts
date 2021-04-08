@@ -13,6 +13,9 @@ import { FacilitiesComponent } from './components/03_facilities/facilities.compo
 import { ContactComponent } from './components/04_contact/contact.component';
 import { PricingComponent } from './components/05_pricing/pricing.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { UnderConstructionDialog } from './components/dialogs/under_construction/under_construction_dialog.component';
 
 export function createTranslateLoader (http: HttpClient) {
   return new TranslateHttpLoader (http, './assets/i18n/', '.json');
@@ -27,6 +30,7 @@ export function createTranslateLoader (http: HttpClient) {
     FacilitiesComponent,
     ContactComponent,
     PricingComponent,
+    UnderConstructionDialog
   ],
   imports: [
     BrowserModule,
@@ -34,6 +38,7 @@ export function createTranslateLoader (http: HttpClient) {
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    MatDialogModule,
     TranslateModule.forRoot ({
       loader: {
         provide: TranslateLoader,
@@ -41,7 +46,8 @@ export function createTranslateLoader (http: HttpClient) {
         deps: [HttpClient]
       }
 
-    })
+    }),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
