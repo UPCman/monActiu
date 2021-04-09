@@ -10,7 +10,7 @@
     //height: 100%;
 
     .title {
-      margin-left: 6rem;
+      margin-left: 2rem;
       background-color: map-get($colors, primary);
       padding: 60px;
       border-radius: 0 0 10px 10px;
@@ -20,6 +20,7 @@
 
     .form-container {
       margin-top: 2rem;
+      padding-top: 2rem;
       width: 100%;
       display: flex;
       //align-items: center;
@@ -110,7 +111,7 @@
           border: 1px solid map-get($colors, backgroundGreen2);
           font-size: map-get($sizes, s);
           color: map-get($colors, grayText);
-          font-family: "Helvetica", sans-serif;
+          font-family: "Josefin", sans-regular;
 
           ~:invalid {
             border-color: red;
@@ -129,7 +130,7 @@
           border: 1px solid map-get($colors, backgroundGreen2);
           font-size: map-get($sizes, s);
           color: map-get($colors, grayText);
-          font-family: "Helvetica", sans-serif;
+          font-family: "Josefin", sans-regular;
           resize: none;
           rows: 4;
         }
@@ -143,7 +144,7 @@
           font-size: map-get($sizes, s);
           background-color: map-get($colors, primary);
           color: white;
-          font-family: "Helvetica", sans-serif;
+          font-family: "Josefin", sans-regular;
           font-weight: bold;
 
           &:disabled {

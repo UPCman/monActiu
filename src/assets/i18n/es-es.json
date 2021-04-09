@@ -22,15 +22,15 @@
     "title": "Tratamientos",
     "manualTherapy": "Terapia Manual",
     "dryNeedling": "Punción Seca",
-    "lymphaticDrainage": "Drenaje limfàtic",
+    "lymphaticDrainage": "Drenaje limfático",
     "electroTherapy": "Electroterapia",
     "poseReeducation": "Reeducación Postural",
-    "fisioSport": "Fisioteràpia Deportiva",
+    "fisioSport": "Fisioterapia Deportiva",
     "manualTherapyText": "Tratamiento de lesiones utilizando técnicas desarrolladas de forma manual como pueden ser masaje, movilización, estiramiento… ",
     "dryNeedlingText": "Técnica invasiva con agujas que tiene como objetivo liberar contracturas y tensiones teniendo como objetivo los puntos gatillos musculares.",
     "lymphaticDrainageText": "Masajes suaves y de baja intensidad que tienen como objetivo favorecer el retorno venoso con finalidad preventiva y de tratamiento para patologías del sistema nervioso.",
     "electroTherapyText": "Técnica con finalidad antiálgica (reducción del dolor) para el tratamiento de dolor tanto agudo como crónico, la que se desarrolla mediante estímulos eléctricos controlados.",
-    "poseReeducationText": "Trabajo activo y consciente de corrección de la posición con diferentes ejercicios de refuerzos y conciencia. Estos son útiles para la extrapolación de esta correcta higiene postural a la vida cuotidiana y rectificar así hábitos nocivos para las estructuras corporales.",
+    "poseReeducationText": "Trabajo activo y consciente de corrección de la posición con diferentes ejercicios de refuerzos y conciencia. Estos son útiles para la extrapolación de esta correcta higiene postural a la vida cotidiana y rectificar así hábitos nocivos para las estructuras corporales.",
     "fisioSportText": "Tratamiento dirigido a esas dolencias que provienen de la práctica deportiva al igual que a la prevención de estas. Tales como: sobrecarga, ruptura fibrilar, distenciones musculares, esguinces, luxaciones..."
   },
   "facilities": {

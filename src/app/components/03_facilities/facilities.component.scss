@@ -15,10 +15,12 @@
       border-radius: 0 0 10px 10px;
       color: white;
       opacity: 0.5;
+      margin-left: -50px;
     }
 
     .description-container {
       margin-top: 2rem;
+      padding-top: 2rem;
       width: 100%;
       display: flex;
       background-color: map-get($colors, backgroundGreen1);
@@ -83,9 +85,8 @@
       background-color: map-get($colors, backgroundGreen1);
 
       .subtitle {
-        font-size: map-get($sizes, xl);
+        font-size: map-get($sizes, l);
         color: map-get($colors, grayText);
-        font-family: "Helvetica", sans-serif;
       }
     }
   }
