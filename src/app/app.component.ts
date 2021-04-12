@@ -4,6 +4,7 @@ import { FULL_CONTACT_PHONE, Language, MainRoute } from './constants/global';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { UnderConstructionDialog } from './components/dialogs/under_construction/under_construction_dialog.component';
+import { DisclaimerDialog } from './components/dialogs/disclaimer/disclaimer_dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -35,6 +36,9 @@ export class AppComponent {
   // underConstructionDialogRef: Under construction dialog reference
   private _underConstructionDialogRef = null;
 
+  // disclaimerDialogRef: Disclaimer dialog reference
+  private _disclaimerDialogRef = null;
+
   constructor (private _translate: TranslateService,
                private _router: Router,
                private _dialog: MatDialog) {
@@ -50,7 +54,7 @@ export class AppComponent {
     });
 
     // Open under construction dialog
-    this.openUnderConstructionDialog();
+    //this.openUnderConstructionDialog();
   }
 
   public toggleOptions () {
@@ -77,6 +81,12 @@ export class AppComponent {
     this._underConstructionDialogRef = this._dialog.open (UnderConstructionDialog, {
       panelClass: 'theme-dialog',
       disableClose: true
+    });
+  }
+
+  public openDisclaimer () {
+    this._disclaimerDialogRef = this._dialog.open (DisclaimerDialog, {
+      panelClass: 'theme-dialog',
     });
   }
 }

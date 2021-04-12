@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { UnderConstructionDialog } from './components/dialogs/under_construction/under_construction_dialog.component';
+import { DisclaimerDialog } from './components/dialogs/disclaimer/disclaimer_dialog.component';
 
 export function createTranslateLoader (http: HttpClient) {
   return new TranslateHttpLoader (http, './assets/i18n/', '.json');
@@ -30,7 +31,8 @@ export function createTranslateLoader (http: HttpClient) {
     FacilitiesComponent,
     ContactComponent,
     PricingComponent,
-    UnderConstructionDialog
+    UnderConstructionDialog,
+    DisclaimerDialog
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,7 @@
   "home": {
     "title": "¿En alguna ocasión has tenido?",
     "pain": "Dolor",
-    "painSubtitle": "(articular, muscular, tendinós...)",
+    "painSubtitle": "(articular, muscular, tendinoso...)",
     "articularLimitations": "Limitación articular",
     "traumaticInjuries": "Lesión traumática y/o deportiva",
     "traumaticInjuriesSubtitle": "(aguda/crónica)",
@@ -71,5 +71,8 @@
   },
   "under_construction_dialog": {
     "message": "Página en construccion"
+  },
+  "disclaimer": {
+    "title": "Aviso legal"
   }
 }

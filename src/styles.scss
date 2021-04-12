@@ -47,7 +47,7 @@ $colors: (
 $sizes: (
   xxxxl:  4rem,
   xxxl:   3.1rem,
-  xxl:    2.1rem,
+  xxl:    2.6rem,
   xl:     1.8rem,
   l:      1.6rem,
   m:      1.4rem,
@@ -70,13 +70,13 @@ html, body {
 }
 
 .title {
-  font-size: map-get($sizes, xxxl);
+  font-size: map-get($sizes, xxl);
   color: map-get($colors, grayText);
   font-family: "Josefin", sans-regular;
 }
 
 .text {
-  font-size: map-get($sizes, l);
+  font-size: map-get($sizes, m);
   color: map-get($colors, grayText);
   text-align: justify;
   font-family: "Josefin", sans-regular;

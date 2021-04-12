@@ -85,7 +85,7 @@
       background-color: map-get($colors, backgroundGreen1);
 
       .subtitle {
-        font-size: map-get($sizes, l);
+        font-size: map-get($sizes, m);
         color: map-get($colors, grayText);
       }
     }
