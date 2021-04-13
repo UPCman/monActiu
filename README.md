@@ -62,3 +62,9 @@ server {
 ```
 
 Then restart nginx: `sudo /etc/init.d/nginx restart`
+
+The following env variables must be declared on server, before start the flask backend server to handle mails (`/mailServer`)
+```
+EMAIL_USER
+EMAIL_PASSWORD
+```
