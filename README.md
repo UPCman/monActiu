@@ -63,8 +63,10 @@ server {
 
 Then restart nginx: `sudo /etc/init.d/nginx restart`
 
+- Copy the mailServer on server `/mailServer/mailServer.py`.   
 The following env variables must be declared on server, before start the flask backend server to handle mails (`/mailServer`)
 ```
-EMAIL_USER
-EMAIL_PASSWORD
+$ export EMAIL_USER=monactiucontactform@gmail.com
+$ export EMAIL_PASSWORD=*********
+$ export FLASK_APP=flaskPATH
 ```
