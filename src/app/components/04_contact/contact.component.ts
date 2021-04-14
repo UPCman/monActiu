@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 
 import { CONTACT_PHONE, CONTACT_ADDRESS, CONTACT_EMAIL, FULL_CONTACT_PHONE } from '../../constants/global';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { EmailSendDialog } from '../dialogs/email_send_dialog/email_send_dialog.component';
+import { EmailErrorDialog } from '../dialogs/email_error/email_error_dialog.component';
 
 @Component({
   selector: 'contact',
@@ -19,11 +22,14 @@ export class ContactComponent {
   // contactForm: contact form
   public contactForm: FormGroup;
 
+  // isSentInProcess: To disable send button when sent is in process
+  public isSentInProcess: boolean = false;
+
   // Google maps configuration
   public center = { lat: 24, lng: 12 };
   public zoom: number = 15;
 
-  constructor (private _http: HttpClient, private _formBuilder: FormBuilder) {
+  constructor (private _http: HttpClient, private _formBuilder: FormBuilder, private _dialog: MatDialog) {
 
     this.contactForm = this._formBuilder.group ({
       name: ['', Validators.required],
@@ -43,7 +49,42 @@ export class ContactComponent {
   }
 
   public sendEmail () {
+    this.isSentInProcess = true;
     console.log ("[ContactComponent][sendEmail]", this.contactForm);
+    let url: string = "https://monactiufisioterapia.com/api/contact/";
+    let headers: HttpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
+    let body: string = JSON.stringify ({
+      name: this.contactForm.value.name,
+      phone: this.contactForm.value.phone,
+      email: this.contactForm.value.email,
+      message: this.contactForm.value.message
+    });
+    console.log ("[ContactComponent][sendEmail] BODY", body);
+    this._http.post (url, body, { headers: headers }).subscribe (
+      response => {
+        this.isSentInProcess = false;
+        console.log ("[ContactComponent][sendEmail] Server response:", response);
+        this.openEmailSentDialog();
+        this.contactForm.reset();
+      },
+      error => {
+        this.isSentInProcess = false;
+        console.error ("[ContactComponent][sendEmail] Failed to send email:", error);
+        this.openErrorDialog();
+      }
+    );
+  }
+
+  public openEmailSentDialog () {
+    this._dialog.open (EmailSendDialog, {
+      panelClass: 'theme-dialog',
+    });
+  }
+
+  public openErrorDialog () {
+    this._dialog.open (EmailErrorDialog, {
+      panelClass: 'theme-dialog',
+    });
   }
 
   // Ensure there are no spaces in input data

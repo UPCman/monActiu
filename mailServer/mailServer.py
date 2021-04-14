@@ -1,9 +1,12 @@
 from flask import Flask, request, jsonify
 from flask_mail import Mail, Message
+from flask_restful import Resource, Api
+from flask_cors import CORS
 from datetime import date
 import os
 
 app = Flask(__name__)
+CORS(app)
 
 mail_settings = {
     "MAIL_SERVER": 'smtp.gmail.com',
@@ -16,9 +19,10 @@ mail_settings = {
 
 app.config.update(mail_settings)
 mail = Mail(app)
+api = Api(app)
 
 
-@app.route('/contact/', methods=['POST'])
+@app.route('/api/contact/', methods=['POST'])
 def contact():
     with app.app_context():
         if request.method == 'POST':
@@ -31,7 +35,7 @@ def contact():
             datestr = today.strftime("%d/%m/%Y")
             msg = Message('[MonActiu] ' + name + ' - ' + datestr,
                           sender=app.config.get("MAIL_USERNAME"),
-                          recipients=["hamelegarnett@gmail.com"])
+                          recipients=["monactiufisioterapia@hotmail.com", email])
             msg.html = "<p><b>MON ACTIU - CORREO DE CONTACTO:</b></p><br>" \
                        "<p><b>Nombre: </b>" + name + "</p>" \
                        "<p><b>Telefono: </b>" + phone + "</p>" \
@@ -42,3 +46,6 @@ def contact():
             return jsonify(isError=False,
                            message="Success",
                            statusCode=200), 200
+
+
+app.run(debug=False)

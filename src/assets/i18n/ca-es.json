@@ -74,5 +74,15 @@
   },
   "disclaimer": {
     "title": "Avís legal"
+  },
+  "email_send_dialog": {
+    "title": "Correu enviat amb èxit",
+    "message": "Rebrà una còpia al seu correu electrònic",
+    "button": "Acceptar"
+  },
+  "email_error_dialog": {
+    "title": "Error a l'enviar el correu de contacte",
+    "message": "Si us plau, torna-ho a intentar més tard, o envia el correu manualment a",
+    "button": "Acceptar"
   }
 }

@@ -1,0 +1,45 @@
+@import "../../../../styles";
+
+.email-error {
+  overflow: hidden;
+
+  .text-container {
+    margin-top: 20px;
+    max-height: calc(100% - 20px);
+    overflow: auto;
+    padding-right: 1rem;
+
+    .title {
+      font-weight: 700;
+      text-align: center;
+      font-size: map-get($sizes, l);
+      color: red;
+      font-family: "Josefin", sans-regular;
+    }
+
+    p {
+      font-size: map-get($sizes, xs);
+      text-align: justify;
+    }
+
+    button {
+      cursor: pointer;
+      width: 50%;
+      border-radius: 5px;
+      padding: 10px;
+      border: none;
+      font-size: map-get($sizes, s);
+      background-color: red;
+      color: white;
+      font-family: "Josefin", sans-regular;
+      font-weight: bold;
+    }
+
+    .buttons {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

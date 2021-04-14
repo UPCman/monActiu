@@ -17,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { UnderConstructionDialog } from './components/dialogs/under_construction/under_construction_dialog.component';
 import { DisclaimerDialog } from './components/dialogs/disclaimer/disclaimer_dialog.component';
+import { EmailSendDialog } from './components/dialogs/email_send_dialog/email_send_dialog.component';
+import { EmailErrorDialog } from './components/dialogs/email_error/email_error_dialog.component';
 
 export function createTranslateLoader (http: HttpClient) {
   return new TranslateHttpLoader (http, './assets/i18n/', '.json');
@@ -32,7 +34,9 @@ export function createTranslateLoader (http: HttpClient) {
     ContactComponent,
     PricingComponent,
     UnderConstructionDialog,
-    DisclaimerDialog
+    DisclaimerDialog,
+    EmailSendDialog,
+    EmailErrorDialog
   ],
   imports: [
     BrowserModule,

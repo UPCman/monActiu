@@ -26,6 +26,15 @@ Install nginx and edit the config file on `/etc/nginx/conf.d/nginx.conf`:
   ssl_certificate_key    /etc/ssl/_.monactiufisioterapia.com_private_key.key;
 
   server_name monactiufisioterapia.com;
+  location /api/contact/ {
+    # Flask API Rest
+    proxy_pass http://127.0.0.1:5000;
+    # Redefine the header fields that NGINX sends to the upstream server
+    proxy_set_header Host \$host;
+    proxy_set_header X-Real-IP \$remote_addr;
+    proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+  }
+
   location / {
     root   /home/dist/monActiu/;
     try_files $uri $uri/ /index.html;
@@ -64,9 +73,16 @@ server {
 Then restart nginx: `sudo /etc/init.d/nginx restart`
 
 - Copy the mailServer on server `/mailServer/mailServer.py`.   
-The following env variables must be declared on server, before start the flask backend server to handle mails (`/mailServer`)
+The following env variables must be declared on server  (`/etc/environment`), before start the flask backend server to handle mails (`/mailServer`)
 ```
-$ export EMAIL_USER=monactiucontactform@gmail.com
-$ export EMAIL_PASSWORD=*********
-$ export FLASK_APP=flaskPATH
+EMAIL_USER=monactiucontactform@gmail.com
+EMAIL_PASSWORD=*********
+FLASK_APP=/home/mailServer.py
+FLASK_ENV="production"
+APP_SETTINGS_MODULE="config.prod"
 ```
+- To start the flask mailServer: `gunicorn --bind 0.0.0.0:5000 mailServer:app &`
+
+- To kill gunicorn processes:  
+`pkill gunicorn`  
+`pkill -1 gunicorn`

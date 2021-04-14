@@ -74,5 +74,15 @@
   },
   "disclaimer": {
     "title": "Aviso legal"
+  },
+  "email_send_dialog": {
+    "title": "Correo enviado con éxito",
+    "message": "Recibirá una copia en su correo electrónico",
+    "button": "Aceptar"
+  },
+  "email_error_dialog": {
+    "title": "Error al enviar el correo de contacto",
+    "message": "Por favor, inténtelo de nuevo o envíe su correo manualmente a",
+    "button": "Aceptar"
   }
 }
