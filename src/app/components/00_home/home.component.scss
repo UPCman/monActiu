@@ -8,6 +8,10 @@
   .container {
     padding: 2rem 6rem;
 
+    @include screen('phone') {
+      padding: 2rem 1rem;
+    }
+
     .title {
       background-color: map-get($colors, primary);
       padding: 60px;
@@ -15,6 +19,12 @@
       color: white;
       opacity: 0.5;
       margin-left: -50px;
+
+      @include screen('phone') {
+        padding: 30px 10px 10px 10px;
+        margin-left: -15px;
+        width: 100%;
+      }
     }
 
     .description-container {
@@ -26,12 +36,19 @@
       //background-color: white;
       border-radius: 10px;
 
+      @include screen('phone') {
+        padding: 0;
+        margin-top: 3rem;
+        padding-top: 0rem;
+      }
+
       .table {
         width: 100%;
         padding: 2rem;
         text-align: center;
-        .text {
-          //color: white;
+
+        @include screen('phone') {
+          padding: 0;
         }
 
         .bold {
@@ -41,6 +58,10 @@
         .text {
           font-size: map-get($sizes, xl);
           color: map-get($colors, grayText);
+
+          @include screen('phone') {
+            font-size: map-get($sizes, xxxxs);
+          }
         }
 
         td {
@@ -65,10 +86,19 @@
     filter: grayscale(80%);
     margin-bottom: 60px;
 
+    @include screen('phone') {
+      height: 400px;
+    }
+
     .subtitle {
       font-size: map-get($sizes, xxxxl);
       //color: map-get($colors, primary);
       color: white;
+
+      @include screen('phone') {
+        font-size: map-get($sizes, xxxl);
+        line-height: 200%;
+      }
     }
   }
 }

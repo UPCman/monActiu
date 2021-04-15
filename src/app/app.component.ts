@@ -54,7 +54,7 @@ export class AppComponent {
     });
 
     // Open under construction dialog
-    //this.openUnderConstructionDialog();
+    this.openUnderConstructionDialog();
   }
 
   public toggleOptions () {

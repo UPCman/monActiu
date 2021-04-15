@@ -25,6 +25,7 @@
     margin-top: 20px;
     max-height: calc(100% - 20px);
     overflow: auto;
+    overflow-x: hidden;
     padding-right: 1rem;
 
     .title {

@@ -61,6 +61,22 @@ $sizes: (
   xxxxxxxs: 0.5rem
 );
 
+$breakpoints: (
+  'phone': 1100px,
+  'desktop': 1920px
+);
+
+@mixin screen($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content
+    }
+  }
+  @else {
+    @warn "Unavailable breakpoint"
+  }
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -73,6 +89,10 @@ html, body {
   font-size: map-get($sizes, xxl);
   color: map-get($colors, grayText);
   font-family: "Josefin", sans-regular;
+
+  @include screen('phone') {
+    font-size: map-get($sizes, m);
+  }
 }
 
 .text {
@@ -81,6 +101,10 @@ html, body {
   text-align: justify;
   font-family: "Josefin", sans-regular;
   line-height: normal;
+
+  @include screen('phone') {
+    font-size: map-get($sizes, xs);
+  }
 }
 
 
@@ -102,8 +126,16 @@ html, body {
   background-color: white;
   border-radius: 15px;
 
+  @include screen('phone') {
+    padding: 10px;
+  }
+
   .mat-dialog-container {
     box-shadow: none;
+
+    @include screen('phone') {
+      padding: 10px;
+    }
 
     p {
       text-align: center;

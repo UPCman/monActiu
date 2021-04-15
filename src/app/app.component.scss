@@ -20,6 +20,16 @@
     margin-left: 2vw;
     cursor: pointer;
 
+    @include screen('phone') {
+      width: 100%;
+      max-width: initial;
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+    }
+
     img {
       max-height: 100%;
     }
@@ -34,6 +44,10 @@
   .titles {
     margin: 4rem 2rem 0 0;
     display: inline-flex;
+
+    @include screen('phone') {
+      display: none
+    }
 
     .pages {
       border-right: 1px solid map-get($colors, primary);
@@ -125,6 +139,10 @@
     align-items: center;
     margin-left: 30px;
 
+    @include screen('phone') {
+      margin-left: 15px;
+    }
+
     i {
       cursor: pointer;
       margin-right: 20px;
@@ -150,15 +168,27 @@
     align-items: center;
     flex-direction: row-reverse;
 
+    @include screen('phone') {
+      margin-right: 5px;
+    }
+
     p {
       text-align: end;
       font-size: map-get($sizes, xxxs);
       margin-left: 10px;
       margin-top: 15px;
+      @include screen('phone') {
+        font-size: map-get($sizes, xxxxxxs);
+        margin-left: 2px;
+      }
     }
 
     i {
       font-size: map-get($sizes, xxs);
+
+      @include screen('phone') {
+        font-size: map-get($sizes, xxxxxxs);
+      }
     }
   }
 
