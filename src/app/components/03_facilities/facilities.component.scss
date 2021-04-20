@@ -58,6 +58,7 @@
           @include screen('phone') {
             width: 100%;
             float: left;
+            margin-right: 0;
           }
 
 
@@ -68,6 +69,7 @@
             @include screen('phone') {
               width: 100%;
               float: left;
+              margin-left: 0;
             }
           }
         }
@@ -75,6 +77,10 @@
         .text {
           //color: white;
           margin-top: 0;
+
+          @include screen('phone') {
+            font-size: map-get($sizes, xxxxs);
+          }
         }
 
         .bold {
@@ -86,13 +92,6 @@
         width: 100%;
         padding: 2rem;
         text-align: center;
-        .text {
-          //color: white;
-
-          @include screen('phone') {
-            font-size: map-get($sizes, xxxxs);
-          }
-        }
 
         .bold {
           font-weight: bold;
@@ -103,7 +102,7 @@
           color: map-get($colors, grayText);
 
           @include screen('phone') {
-            font-size: map-get($sizes, xxxxs);
+            font-size: map-get($sizes, xxs);
           }
         }
 
@@ -129,9 +128,10 @@
       .subtitle {
         font-size: map-get($sizes, m);
         color: map-get($colors, grayText);
+        font-family: Josefin, "Josefin", sans-regular;
 
         @include screen('phone') {
-          font-size: map-get($sizes, xxxs);
+          font-size: map-get($sizes, xxxxs);
         }
       }
     }

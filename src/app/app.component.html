@@ -37,7 +37,7 @@
   </div>
   <div class="main-container">
     <div class="side-menu" [ngClass]="{'menu-open': isSideMenuOpen }" (swipeleft)="closeSideMenu()">
-      <p [ngClass]="{'active': activeRoute === MainRoute.HOME }" [routerLink]=[MainRoute.HOME]>{{ 'home.menuTitle' | translate | uppercase }}</p>
+      <p [ngClass]="{'active': activeRoute === MainRoute.HOME }" [routerLink]=[MainRoute.HOME]>{{ ('home.menuTitle' | translate ) | uppercase }}</p>
       <p [ngClass]="{'active': activeRoute === MainRoute.ABOUT }" [routerLink]=[MainRoute.ABOUT]>{{ 'about.title' | translate | uppercase }}</p>
       <p [ngClass]="{'active': activeRoute === MainRoute.TREATMENTS }" [routerLink]=[MainRoute.TREATMENTS]>{{ 'treatments.title' | translate | uppercase }}</p>
       <p [ngClass]="{'active': activeRoute === MainRoute.FACILITIES }" [routerLink]=[MainRoute.FACILITIES]>{{ 'facilities.title' | translate | uppercase }}</p>
