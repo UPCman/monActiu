@@ -15,6 +15,10 @@
   color: map-get($colors, grayText);
   border-bottom: 1px solid map-get($colors, primary);
 
+  @include screen('phone') {
+    height: 100px;
+  }
+
   .logo {
     max-width: 50%;
     margin-left: 2vw;
@@ -112,17 +116,108 @@
 
 
   }
+
+  .menu-button {
+
+    display: none;
+
+    @include screen('phone') {
+      position: absolute;
+      height: 100px;
+      display: table;
+      text-align: center;
+      cursor: pointer;
+
+      i {
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 30px;
+        padding: 20px;
+      }
+    }
+  }
 }
 
 .main-container {
   width: 100%;
-  height: calc(100% - 160px);
+  height: calc(100% - 150px);
   background-color: map-get($colors, backgroundGreen2);
   margin-bottom: 30px;
+
+  @include screen('phone') {
+    height: calc(100% - 100px);
+  }
+
+  .side-menu {
+    display: none;
+
+    @include screen('phone') {
+      display: initial;
+      position: absolute;
+      background-color: white;
+      z-index: 100;
+      padding: 20px;
+      height: 100%;
+      opacity: 0.9;
+      -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+      transform: translateX(-100%);
+
+      &.menu-open {
+        transform: initial;
+      }
+
+      p {
+        font-weight: 500;
+        cursor: pointer;
+        color: map-get($colors, grayText);
+
+        &.active {
+          font-weight: 700;
+          color: map-get($colors, primary);
+          cursor: auto;
+        }
+
+        &:hover {
+          color: map-get($colors, secondary);
+        }
+      }
+      :focus {
+        outline: none;
+      }
+    }
+  }
+
+  .outside-menu {
+
+    display: none;
+
+    @include screen('phone') {
+      display: initial;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      position: absolute;
+    }
+  }
+
+  .swipe-area {
+    display: none;
+
+    @include screen('phone') {
+      display: initial;
+      width: 50%;
+      height: 100%;
+      position: absolute;
+    }
+  }
 }
 
 .footer {
   position: absolute;
+  z-index: 999;
   bottom: 0;
   height: 36px;
   width: 100%;
@@ -211,10 +306,15 @@
       -moz-transition: all .5s ease;
       -o-transition: all .5s ease;
       transition: all .5s ease;
+
       &:hover {
         font-size: map-get($sizes, xs);
         color: map-get($colors, primary);
       }
     }
   }
+}
+
+.mat-sidenav-container {
+  position: absolute;
 }

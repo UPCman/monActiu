@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MainRoute } from '../../constants/global';
+
 
 @Component({
   selector: 'home',
@@ -6,4 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  // To use enums on template
+  public MainRoute = MainRoute;
 }

@@ -31,8 +31,21 @@
 
         </div>
     </div>
+    <div class="menu-button" (click)="toggleSideMenu()">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+    </div>
   </div>
   <div class="main-container">
+    <div class="side-menu" [ngClass]="{'menu-open': isSideMenuOpen }" (swipeleft)="closeSideMenu()">
+      <p [ngClass]="{'active': activeRoute === MainRoute.HOME }" [routerLink]=[MainRoute.HOME]>{{ 'home.menuTitle' | translate | uppercase }}</p>
+      <p [ngClass]="{'active': activeRoute === MainRoute.ABOUT }" [routerLink]=[MainRoute.ABOUT]>{{ 'about.title' | translate | uppercase }}</p>
+      <p [ngClass]="{'active': activeRoute === MainRoute.TREATMENTS }" [routerLink]=[MainRoute.TREATMENTS]>{{ 'treatments.title' | translate | uppercase }}</p>
+      <p [ngClass]="{'active': activeRoute === MainRoute.FACILITIES }" [routerLink]=[MainRoute.FACILITIES]>{{ 'facilities.title' | translate | uppercase }}</p>
+      <p [ngClass]="{'active': activeRoute === MainRoute.CONTACT }" [routerLink]=[MainRoute.CONTACT]>{{ 'contact.title' | translate | uppercase }}</p>
+      <p [ngClass]="{'active': activeRoute === MainRoute.PRICING }" [routerLink]=[MainRoute.PRICING]>{{ 'pricing.title' | translate | uppercase }}</p>
+    </div>
+    <div *ngIf="isSideMenuOpen" class="outside-menu" (click)="closeSideMenu()"></div>
+    <div class="swipe-area" (swiperight)="openSideMenu()"></div>
     <router-outlet></router-outlet>
   </div>
   <div class="footer">

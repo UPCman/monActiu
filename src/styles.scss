@@ -110,6 +110,10 @@ html, body {
 
 ::-webkit-scrollbar {
   width: 1em;
+
+  @include screen('phone') {
+    display: none;
+  }
 }
 
 ::-webkit-scrollbar-track {

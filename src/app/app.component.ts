@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { FULL_CONTACT_PHONE, Language, MainRoute } from './constants/global';
 import { Router } from '@angular/router';
@@ -33,6 +33,9 @@ export class AppComponent {
   // isLanguageSelectorOpen: To manage language selector logic
   public isLanguageSelectorOpen: boolean = false;
 
+  // isSideMenuOpen: Flag to display the side menu
+  public isSideMenuOpen: boolean = false;
+
   // underConstructionDialogRef: Under construction dialog reference
   private _underConstructionDialogRef = null;
 
@@ -48,13 +51,14 @@ export class AppComponent {
     this._router.events.subscribe ((val: any) => {
       if (val.hasOwnProperty ('url')) {
         this.isLanguageSelectorOpen = false;
+        this.isSideMenuOpen = false;
         this.activeRoute = val.url.replace ('/', '');
         // console.log ("[AppComponent] Route:", val.url);
       }
     });
 
     // Open under construction dialog
-    this.openUnderConstructionDialog();
+    //this.openUnderConstructionDialog();
   }
 
   public toggleOptions () {
@@ -73,8 +77,19 @@ export class AppComponent {
   }
 
   public openInstagram () {
-    //window.document.location.href = 'https://api.whatsapp.com/send?phone=' + CONTACT_PHONE;
-    window.open ('https://www.instagram.com/juditsanchezcentelles/', '_blank');
+    window.open ('https://www.instagram.com/monactiufisioterapia/', '_blank');
+  }
+
+  public toggleSideMenu () {
+    this.isSideMenuOpen = !this.isSideMenuOpen;
+  }
+
+  public openSideMenu () {
+    this.isSideMenuOpen = true;
+  }
+
+  public closeSideMenu () {
+    this.isSideMenuOpen = false;
   }
 
   public openUnderConstructionDialog () {

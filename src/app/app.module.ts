@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +19,7 @@ import { UnderConstructionDialog } from './components/dialogs/under_construction
 import { DisclaimerDialog } from './components/dialogs/disclaimer/disclaimer_dialog.component';
 import { EmailSendDialog } from './components/dialogs/email_send_dialog/email_send_dialog.component';
 import { EmailErrorDialog } from './components/dialogs/email_error/email_error_dialog.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 export function createTranslateLoader (http: HttpClient) {
   return new TranslateHttpLoader (http, './assets/i18n/', '.json');
@@ -36,7 +37,7 @@ export function createTranslateLoader (http: HttpClient) {
     UnderConstructionDialog,
     DisclaimerDialog,
     EmailSendDialog,
-    EmailErrorDialog
+    EmailErrorDialog,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +46,8 @@ export function createTranslateLoader (http: HttpClient) {
     FormsModule,
     ReactiveFormsModule,
     MatDialogModule,
+    MatSidenavModule,
+    HammerModule,
     TranslateModule.forRoot ({
       loader: {
         provide: TranslateLoader,

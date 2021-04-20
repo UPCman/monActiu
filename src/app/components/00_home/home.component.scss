@@ -85,9 +85,11 @@
     justify-content: center;
     filter: grayscale(80%);
     margin-bottom: 60px;
+    cursor: pointer;
 
     @include screen('phone') {
-      height: 400px;
+      height: 300px;
+      margin-bottom: 30px;
     }
 
     .subtitle {
