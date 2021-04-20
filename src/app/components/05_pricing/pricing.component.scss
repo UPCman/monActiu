@@ -6,20 +6,25 @@
   overflow: auto;
 
   .container {
-    padding: 2rem 0;
+    width: 100%;
 
     .title-container {
       margin-top: 2rem;
-      padding: 2rem 6rem;
     }
 
     .title {
-      margin-left: 2rem;
+      margin-left: 6rem;
       background-color: map-get($colors, primary);
       padding: 60px;
       border-radius: 0 0 10px 10px;
       color: white;
       opacity: 0.5;
+
+      @include screen('phone') {
+        padding: 40px 10px 10px 10px;
+        margin-left: 1rem;
+        width: 100%;
+      }
     }
 
     .description-container {
@@ -33,6 +38,11 @@
         width: 600px;
         padding: 2rem;
         text-align: center;
+
+        @include screen('phone') {
+          padding: 1rem;
+        }
+
         .text {
           //color: white;
         }
@@ -44,6 +54,10 @@
         .text {
           font-size: map-get($sizes, l);
           color: map-get($colors, grayText);
+
+          @include screen('phone') {
+            font-size: map-get($sizes, xxs);
+          }
         }
 
         td {
