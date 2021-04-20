@@ -72,8 +72,11 @@ export class AppComponent {
   }
 
   public openWhatsapp () {
-    //window.document.location.href = 'https://api.whatsapp.com/send?phone=' + CONTACT_PHONE;
-    window.open ('https://web.whatsapp.com/send?phone=' + FULL_CONTACT_PHONE, '_blank');
+    if (this.isMobile()) {
+      window.document.location.href = 'https://api.whatsapp.com/send?phone=' + FULL_CONTACT_PHONE;
+    } else {
+      window.open ('https://web.whatsapp.com/send?phone=' + FULL_CONTACT_PHONE, '_blank');
+    }
   }
 
   public openInstagram () {
@@ -103,5 +106,14 @@ export class AppComponent {
     this._disclaimerDialogRef = this._dialog.open (DisclaimerDialog, {
       panelClass: 'theme-dialog',
     });
+  }
+
+  private isMobile() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test (navigator.userAgent)) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 }

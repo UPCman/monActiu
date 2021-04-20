@@ -44,8 +44,11 @@ export class ContactComponent {
   }
 
   public openWhatsapp () {
-    //window.document.location.href = 'https://api.whatsapp.com/send?phone=' + CONTACT_PHONE;
-    window.open ('https://web.whatsapp.com/send?phone=' + FULL_CONTACT_PHONE, '_blank');
+    if (this.isMobile()) {
+      window.document.location.href = 'https://api.whatsapp.com/send?phone=' + FULL_CONTACT_PHONE;
+    } else {
+      window.open ('https://web.whatsapp.com/send?phone=' + FULL_CONTACT_PHONE, '_blank');
+    }
   }
 
   public sendEmail () {
@@ -98,6 +101,15 @@ export class ContactComponent {
   private isEmailValid (control: FormControl) : { [s: string]: boolean } {
     if (!/^(([\s]*[^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}[\s]*))$/.test (control.value)) {
       return { invalidEmail: true };
+    }
+  }
+
+  private isMobile() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test (navigator.userAgent)) {
+      return true;
+    }
+    else {
+      return false;
     }
   }
 }
