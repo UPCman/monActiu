@@ -43,6 +43,13 @@
       <p [ngClass]="{'active': activeRoute === MainRoute.FACILITIES }" [routerLink]=[MainRoute.FACILITIES]>{{ 'facilities.title' | translate | uppercase }}</p>
       <p [ngClass]="{'active': activeRoute === MainRoute.CONTACT }" [routerLink]=[MainRoute.CONTACT]>{{ 'contact.title' | translate | uppercase }}</p>
       <p [ngClass]="{'active': activeRoute === MainRoute.PRICING }" [routerLink]=[MainRoute.PRICING]>{{ 'pricing.title' | translate | uppercase }}</p>
+      <div class="line"></div>
+      <p *ngIf="language === Language.SPANISH" (click)="selectLanguage(Language.CATALAN)">
+        {{ 'languages.ca-es' | translate }}
+      </p>
+      <p *ngIf="language === Language.CATALAN" (click)="selectLanguage(Language.SPANISH)">
+        {{ 'languages.es-es' | translate }}
+      </p>
     </div>
     <div *ngIf="isSideMenuOpen" class="outside-menu" (click)="closeSideMenu()"></div>
     <div class="swipe-area" (swiperight)="openSideMenu()"></div>

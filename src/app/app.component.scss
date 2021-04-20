@@ -169,6 +169,12 @@
         transform: initial;
       }
 
+      .line {
+        width: 100%;
+        border-bottom: 1px solid map-get($colors, primary);
+        margin-bottom: 10px;
+      }
+
       p {
         font-weight: 500;
         cursor: pointer;
@@ -208,7 +214,7 @@
 
     @include screen('phone') {
       display: initial;
-      width: 50%;
+      width: 5%;
       height: 100%;
       position: absolute;
     }

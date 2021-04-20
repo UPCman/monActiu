@@ -69,6 +69,7 @@ export class AppComponent {
     this.isLanguageSelectorOpen = false;
     this.language = language;
     this._translate.use (language);
+    this.isSideMenuOpen = false;
   }
 
   public openWhatsapp () {

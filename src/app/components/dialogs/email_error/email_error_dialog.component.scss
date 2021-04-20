@@ -15,11 +15,19 @@
       font-size: map-get($sizes, l);
       color: red;
       font-family: "Josefin", sans-regular;
+
+      @include screen('phone') {
+        font-size: map-get($sizes, xxs);
+      }
     }
 
     p {
       font-size: map-get($sizes, xs);
       text-align: justify;
+
+      @include screen('phone') {
+        font-size: map-get($sizes, xxxxs);
+      }
     }
 
     button {
@@ -33,6 +41,10 @@
       color: white;
       font-family: "Josefin", sans-regular;
       font-weight: bold;
+
+      @include screen('phone') {
+        font-size: map-get($sizes, xxs);
+      }
     }
 
     .buttons {
