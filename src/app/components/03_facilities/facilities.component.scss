@@ -140,7 +140,7 @@
     display: flex;
     justify-content: space-between;
     align-content: block;
-    overflow-x: scroll;
+    overflow-x: auto;
     margin-bottom: 100px;
     background-color: map-get($colors, backgroundGreen1);
     margin-left: 1rem;
@@ -164,6 +164,7 @@
         width: auto;
         max-width: 95%;
         height: 400px;
+        max-height: 70vh;
       }
     }
   }

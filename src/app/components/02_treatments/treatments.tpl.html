@@ -6,55 +6,123 @@
     <div class="description-container">
       <table class="table">
         <tr>
-          <td>
+          <td (click)="selectedTreatment = Treatmens.manualTherapy" [ngClass]="{ 'active': selectedTreatment === Treatmens.manualTherapy}">
             <span class="text bold">{{ "treatments.manualTherapy" | translate}}</span>
           </td>
-          <td>
+          <td (click)="selectedTreatment = Treatmens.dryNeedling" [ngClass]="{ 'active': selectedTreatment === Treatmens.dryNeedling}">
             <span class="text bold">{{ "treatments.dryNeedling" | translate}}</span>
           </td>
-          <td>
+          <td (click)="selectedTreatment = Treatmens.lymphaticDrainage" [ngClass]="{ 'active': selectedTreatment === Treatmens.lymphaticDrainage}">
             <span class="text bold">{{ "treatments.lymphaticDrainage" | translate}}</span>
           </td>
         </tr>
         <tr>
-          <td>
+          <td (click)="selectedTreatment = Treatmens.electroTherapy" [ngClass]="{ 'active': selectedTreatment === Treatmens.electroTherapy}">
             <span class="text bold">{{ "treatments.electroTherapy" | translate}}</span>
           </td>
-          <td>
+          <td (click)="selectedTreatment = Treatmens.poseReeducation" [ngClass]="{ 'active': selectedTreatment === Treatmens.poseReeducation}">
             <span class="text bold">{{ "treatments.poseReeducation" | translate}}</span>
           </td>
-          <td>
+          <td (click)="selectedTreatment = Treatmens.fisioSport" [ngClass]="{ 'active': selectedTreatment === Treatmens.fisioSport}">
             <span class="text bold">{{ "treatments.fisioSport" | translate}}</span>
+          </td>
+        </tr>
+        <tr>
+          <td (click)="selectedTreatment = Treatmens.exerciseTherapy" [ngClass]="{ 'active': selectedTreatment === Treatmens.exerciseTherapy}">
+            <span class="text bold">{{ "treatments.exerciseTherapy" | translate}}</span>
+          </td>
+          <td (click)="selectedTreatment = Treatmens.percussionTherapy" [ngClass]="{ 'active': selectedTreatment === Treatmens.percussionTherapy}">
+            <span class="text bold">{{ "treatments.percussionTherapy" | translate}}</span>
+          </td>
+          <td (click)="selectedTreatment = Treatmens.termoTherapy" [ngClass]="{ 'active': selectedTreatment === Treatmens.termoTherapy}">
+            <span class="text bold">{{ "treatments.termoTherapy" | translate}}</span>
           </td>
         </tr>
       </table>
     </div>
-    <div class="description-container">
-      <div class="description">
-        <p>
-          <span class="text bold">{{ "treatments.manualTherapy" | translate}}: </span>
-          <span class="text">{{ "treatments.manualTherapyText" | translate}}</span>
-        </p>
-        <p>
-          <span class="text bold">{{ "treatments.dryNeedling" | translate}}: </span>
-          <span class="text">{{ "treatments.dryNeedlingText" | translate}}</span>
-        </p>
-        <p>
-          <span class="text bold">{{ "treatments.lymphaticDrainage" | translate}}: </span>
-          <span class="text">{{ "treatments.lymphaticDrainageText" | translate}}</span>
-        </p>
-        <p>
-          <span class="text bold">{{ "treatments.electroTherapy" | translate}}: </span>
-          <span class="text">{{ "treatments.electroTherapyText" | translate}}</span>
-        </p>
-        <p>
-          <span class="text bold">{{ "treatments.poseReeducation" | translate}}: </span>
-          <span class="text">{{ "treatments.poseReeducationText" | translate}}</span>
-        </p>
-        <p>
-          <span class="text bold">{{ "treatments.fisioSport" | translate}}: </span>
-          <span class="text">{{ "treatments.fisioSportText" | translate}}</span>
-        </p>
+    <div class="description-container no-top">
+      <div class="description" [ngSwitch]="selectedTreatment">
+        <div *ngSwitchCase="Treatmens.manualTherapy" class="vertical-align-container">
+          <img src="./assets/img/manual.jpg">
+          <div>
+            <span class="text bold">{{ "treatments.manualTherapy" | translate}}: </span>
+            <br>
+            <br>
+            <span class="text">{{ "treatments.manualTherapyText" | translate}}</span>
+          </div>
+        </div>
+        <div *ngSwitchCase="Treatmens.dryNeedling" class="vertical-align-container">
+          <img src="./assets/img/Puncio.jpg">
+          <div>
+            <span class="text bold">{{ "treatments.dryNeedling" | translate}}: </span>
+            <br>
+            <br>
+            <span class="text">{{ "treatments.dryNeedlingText" | translate}}</span>
+          </div>
+        </div>
+        <div *ngSwitchCase="Treatmens.lymphaticDrainage" class="vertical-align-container">
+          <img src="./assets/img/limfatic.jpg">
+          <div>
+            <span class="text bold">{{ "treatments.lymphaticDrainage" | translate}}: </span>
+            <br>
+            <br>
+            <span class="text">{{ "treatments.lymphaticDrainageText" | translate}}</span>
+          </div>
+        </div>
+        <div *ngSwitchCase="Treatmens.electroTherapy" class="vertical-align-container">
+          <img src="./assets/img/electroterapia.jpg">
+          <div>
+            <span class="text bold">{{ "treatments.electroTherapy" | translate}}: </span>
+            <br>
+            <br>
+            <span class="text">{{ "treatments.electroTherapyText" | translate}}</span>
+          </div>
+        </div>
+        <div *ngSwitchCase="Treatmens.poseReeducation" class="vertical-align-container">
+          <img src="./assets/img/postural.jpg">
+          <div>
+            <span class="text bold">{{ "treatments.poseReeducation" | translate}}: </span>
+            <br>
+            <br>
+            <span class="text">{{ "treatments.poseReeducationText" | translate}}</span>
+          </div>
+        </div>
+        <div *ngSwitchCase="Treatmens.fisioSport" class="vertical-align-container">
+          <img src="./assets/img/esportiva.jpg">
+          <div>
+            <span class="text bold">{{ "treatments.fisioSport" | translate}}: </span>
+            <br>
+            <br>
+            <span class="text">{{ "treatments.fisioSportText" | translate}}</span>
+          </div>
+        </div>
+        <div *ngSwitchCase="Treatmens.exerciseTherapy" class="vertical-align-container">
+          <img src="./assets/img/exercici.jpg">
+          <div>
+            <span class="text bold">{{ "treatments.exerciseTherapy" | translate}}: </span>
+            <br>
+            <br>
+            <span class="text">{{ "treatments.exerciseTherapyText" | translate}}</span>
+          </div>
+        </div>
+        <div *ngSwitchCase="Treatmens.percussionTherapy" class="vertical-align-container">
+          <img src="./assets/img/percutiva.jpg">
+          <div>
+            <span class="text bold">{{ "treatments.percussionTherapy" | translate}}: </span>
+            <br>
+            <br>
+            <span class="text">{{ "treatments.percussionTherapyText" | translate}}</span>
+          </div>
+        </div>
+        <div *ngSwitchCase="Treatmens.termoTherapy" class="vertical-align-container">
+          <img src="./assets/img/termoterapia.jpg">
+          <div>
+            <span class="text bold">{{ "treatments.termoTherapy" | translate}}: </span>
+            <br>
+            <br>
+            <span class="text">{{ "treatments.termoTherapyText" | translate}}</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
