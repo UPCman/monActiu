@@ -6,10 +6,10 @@
   overflow: scroll;
 
   .container {
-    padding: 2rem 6rem;
+    padding: 2rem 6rem 0;
 
     @include screen('phone') {
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 0;
     }
 
     .title {
@@ -137,14 +137,34 @@
     }
   }
   .image-gallery {
-    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-content: flex-start;
+    align-content: block;
+    overflow-x: scroll;
     margin-bottom: 100px;
+    background-color: map-get($colors, backgroundGreen1);
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    @include screen('phone') {
+      align-content: block;
+      overflow-x: scroll;
+      margin-left: 0;
+      margin-right: 0;
+    }
 
     img {
-      width: 33.3%;
+      max-width: 95%;
+      padding: 1rem;
+      max-height: 600px;
+      height: 600px;
+      object-fit: contain;
+
+      @include screen('phone') {
+        width: auto;
+        max-width: 95%;
+        height: 400px;
+      }
     }
   }
 }

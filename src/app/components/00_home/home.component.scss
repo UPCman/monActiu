@@ -76,7 +76,7 @@
     text-align: center;
     width: 100%;
     height: 500px;
-    background-image: url("../../../assets/img/fisioPhoto1.png");
+    background-image: url("../../../assets/img/homedesktop2.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -90,6 +90,7 @@
     @include screen('phone') {
       height: 300px;
       margin-bottom: 30px;
+      background-image: url("../../../assets/img/homemobile2.jpg");
     }
 
     .subtitle {
