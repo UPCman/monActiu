@@ -62,7 +62,8 @@ $sizes: (
 );
 
 $breakpoints: (
-  'phone': 1100px,
+  'phone': 1050px,
+  'laptop': 1400px,
   'desktop': 1920px
 );
 
@@ -93,6 +94,10 @@ html, body {
   @include screen('phone') {
     font-size: map-get($sizes, m);
   }
+
+  @include screen('laptop') {
+    font-size: map-get($sizes, xl);
+  }
 }
 
 .text {
@@ -104,6 +109,10 @@ html, body {
 
   @include screen('phone') {
     font-size: map-get($sizes, xs);
+  }
+
+  @include screen('laptop') {
+    font-size: map-get($sizes, s);
   }
 }
 

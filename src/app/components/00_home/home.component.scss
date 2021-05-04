@@ -25,6 +25,10 @@
         margin-left: -15px;
         width: 100%;
       }
+
+      @include screen('laptop') {
+        padding: 40px;
+      }
     }
 
     .description-container {
@@ -61,6 +65,10 @@
 
           @include screen('phone') {
             font-size: map-get($sizes, xxxxs);
+          }
+
+          @include screen('laptop') {
+            font-size: map-get($sizes, m);
           }
         }
 

@@ -20,6 +20,10 @@
       color: white;
       opacity: 0.5;
 
+      @include screen('laptop') {
+        padding: 40px;
+      }
+
       @include screen('phone') {
         padding: 40px 10px 10px 10px;
         margin-left: 1rem;

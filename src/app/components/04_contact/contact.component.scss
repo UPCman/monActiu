@@ -21,6 +21,10 @@
       color: white;
       opacity: 0.5;
 
+      @include screen('laptop') {
+        padding: 40px;
+      }
+
       @include screen('phone') {
         padding: 30px 10px 10px 10px;
         margin-left: 1rem;
@@ -59,6 +63,11 @@
         min-width: 500px;
         max-width: 750px;
 
+        @include screen('laptop') {
+          max-width: 750px;
+          min-width: 450px;
+        }
+
         @include screen('phone') {
           padding-left:  1rem;
           width: auto;
@@ -88,6 +97,10 @@
               @include screen('phone') {
                 font-size: map-get($sizes, xxs);
               }
+
+              @include screen('laptop') {
+                font-size: map-get($sizes, m);
+              }
             }
 
             &:hover {
@@ -98,6 +111,10 @@
                 @include screen('phone') {
                   font-size: map-get($sizes, xs);
                 }
+
+                @include screen('laptop') {
+                  font-size: map-get($sizes, l);
+                }
               }
             }
           }
@@ -107,6 +124,10 @@
             margin-bottom: 10px;
             display: flex;
             align-items: center;
+
+            @include screen('laptop') {
+              height: 40px;
+            }
 
             .push {
               margin-left: auto;

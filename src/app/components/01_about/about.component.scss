@@ -29,6 +29,10 @@
         margin-left: -20px;
         width: 100%;
       }
+
+      @include screen('laptop') {
+        padding: 40px;
+      }
     }
 
     .bio {
@@ -73,6 +77,10 @@
           margin-top: 1rem;
           border-radius: 10px;
         }
+
+        @include screen('laptop') {
+          max-width: 250px;
+        }
       }
 
       .description {
@@ -90,6 +98,10 @@
 
           @include screen('phone') {
             padding: 0;
+          }
+
+          @include screen('laptop') {
+            padding: 0.5rem;
           }
         }
       }

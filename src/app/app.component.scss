@@ -15,6 +15,10 @@
   color: map-get($colors, grayText);
   border-bottom: 1px solid map-get($colors, primary);
 
+  @include screen('laptop') {
+    height: 120px;
+  }
+
   @include screen('phone') {
     height: 100px;
   }
@@ -23,6 +27,10 @@
     max-width: 50%;
     margin-left: 2vw;
     cursor: pointer;
+
+    @include screen('laptop') {
+      width: 225px;
+    }
 
     @include screen('phone') {
       width: 100%;
@@ -62,6 +70,10 @@
         font-weight: 700;
         cursor: pointer;
 
+        @include screen('laptop') {
+          font-size: map-get($sizes, xxxxxs);
+        }
+
         &.active {
           font-weight: 900;
           color: map-get($colors, primary);
@@ -91,6 +103,10 @@
         min-width: 60px;
         display: flex;
 
+        @include screen('laptop') {
+          font-size: map-get($sizes, xxxxxs);
+        }
+
         i {
           margin-left: 6px;
         }
@@ -110,6 +126,10 @@
         border-radius: 0 0 10px 10px;
         p:hover {
           color: map-get($colors, backgroundGreen2);
+        }
+
+        @include screen('laptop') {
+          font-size: map-get($sizes, xxxxxs);
         }
       }
     }
