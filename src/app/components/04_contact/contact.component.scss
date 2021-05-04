@@ -63,6 +63,8 @@
           padding-left:  1rem;
           width: auto;
           text-align: center;
+          min-width: 90vw;
+          max-width: 90vw;
         }
 
         p {
@@ -105,6 +107,15 @@
             margin-bottom: 10px;
             display: flex;
             align-items: center;
+
+            .push {
+              margin-left: auto;
+              margin-right: 100px;
+
+              @include screen('phone') {
+                margin-right: 0;
+              }
+            }
 
             i {
               color: map-get($colors, grayText);
