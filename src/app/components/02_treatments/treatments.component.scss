@@ -20,14 +20,14 @@
       opacity: 0.5;
       margin-left: -50px;
 
+      @include screen('laptop') {
+        padding: 40px;
+      }
+
       @include screen('phone') {
         padding: 30px 10px 10px 10px;
         margin-left: 0rem;
         width: 100%;
-      }
-
-      @include screen('laptop') {
-        padding: 40px;
       }
     }
 
@@ -64,12 +64,12 @@
         .text {
           font-size: map-get($sizes, xl);
 
-          @include screen('phone') {
-            font-size: map-get($sizes, xxxxs);
-          }
-
           @include screen('laptop') {
             font-size: map-get($sizes, l);
+          }
+
+          @include screen('phone') {
+            font-size: map-get($sizes, xxxxs);
           }
         }
 
@@ -105,12 +105,12 @@
         padding: 2rem;
         text-align: center;
 
-        @include screen('phone') {
-          padding: 0;
-        }
-
         @include screen('laptop') {
           padding: 1rem;
+        }
+
+        @include screen('phone') {
+          padding: 0;
         }
 
         .text {

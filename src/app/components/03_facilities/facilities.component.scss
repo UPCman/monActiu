@@ -20,14 +20,14 @@
       opacity: 0.5;
       margin-left: -50px;
 
+      @include screen('laptop') {
+        padding: 40px;
+      }
+
       @include screen('phone') {
         padding: 30px 10px 10px 10px;
         margin-left: 0;
         width: 100%;
-      }
-
-      @include screen('laptop') {
-        padding: 40px;
       }
     }
 
@@ -39,15 +39,15 @@
       background-color: map-get($colors, backgroundGreen1);
       border-radius: 10px;
 
+      @include screen('laptop') {
+        margin-top: 2rem;
+        padding: 0;
+      }
+
       @include screen('phone') {
         padding: 0;
         margin-top: 3rem;
         padding-top: 0rem;
-      }
-
-      @include screen('laptop') {
-        margin-top: 2rem;
-        padding: 0;
       }
 
       .description {
@@ -87,12 +87,12 @@
           //color: white;
           margin-top: 0;
 
-          @include screen('phone') {
-            font-size: map-get($sizes, xxxxs);
-          }
-
           @include screen('laptop') {
             font-size: map-get($sizes, xs);
+          }
+
+          @include screen('phone') {
+            font-size: map-get($sizes, xxxxs);
           }
         }
 
@@ -143,12 +143,12 @@
         color: map-get($colors, grayText);
         font-family: Josefin, "Josefin", sans-regular;
 
-        @include screen('phone') {
-          font-size: map-get($sizes, xxxxs);
-        }
-
         @include screen('laptop') {
           font-size: map-get($sizes, xs);
+        }
+
+        @include screen('phone') {
+          font-size: map-get($sizes, xxxxs);
         }
       }
     }

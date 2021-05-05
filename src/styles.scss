@@ -91,12 +91,12 @@ html, body {
   color: map-get($colors, grayText);
   font-family: "Josefin", sans-regular;
 
-  @include screen('phone') {
-    font-size: map-get($sizes, m);
-  }
-
   @include screen('laptop') {
     font-size: map-get($sizes, xl);
+  }
+
+  @include screen('phone') {
+    font-size: map-get($sizes, m);
   }
 }
 
@@ -107,12 +107,12 @@ html, body {
   font-family: "Josefin", sans-regular;
   line-height: normal;
 
-  @include screen('phone') {
-    font-size: map-get($sizes, xs);
-  }
-
   @include screen('laptop') {
     font-size: map-get($sizes, s);
+  }
+
+  @include screen('phone') {
+    font-size: map-get($sizes, xs);
   }
 }
 

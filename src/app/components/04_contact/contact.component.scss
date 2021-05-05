@@ -94,12 +94,12 @@
               -o-transition: all .5s ease;
               transition: all .5s ease;
 
-              @include screen('phone') {
-                font-size: map-get($sizes, xxs);
-              }
-
               @include screen('laptop') {
                 font-size: map-get($sizes, m);
+              }
+
+              @include screen('phone') {
+                font-size: map-get($sizes, xxs);
               }
             }
 
@@ -108,12 +108,12 @@
                 font-size: map-get($sizes, xl);
                 color: map-get($colors, primary);
 
-                @include screen('phone') {
-                  font-size: map-get($sizes, xs);
-                }
-
                 @include screen('laptop') {
                   font-size: map-get($sizes, l);
+                }
+
+                @include screen('phone') {
+                  font-size: map-get($sizes, xs);
                 }
               }
             }
