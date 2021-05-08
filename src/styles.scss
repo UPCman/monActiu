@@ -158,6 +158,21 @@ html, body {
   }
 }
 
+.v-dialog  {
+  padding: 0px;
+  background-color: white;
+  border-radius: 15px;
+
+  @include screen('phone') {
+    width: 90vw;
+  }
+
+  .mat-dialog-container {
+    box-shadow: none;
+    padding: 5px;
+  }
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Josefin, "Josefin", sans-regular; }
 @font-face {

@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { UnderConstructionDialog } from './components/dialogs/under_construction/under_construction_dialog.component';
 import { DisclaimerDialog } from './components/dialogs/disclaimer/disclaimer_dialog.component';
+import { VideoDialog } from './components/dialogs/video_dialog/video_dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -59,6 +60,8 @@ export class AppComponent {
 
     // Open under construction dialog
     // this.openUnderConstructionDialog();
+    // Open video dialog
+    this.openVideoDialog();
   }
 
   public toggleOptions () {
@@ -100,6 +103,12 @@ export class AppComponent {
     this._underConstructionDialogRef = this._dialog.open (UnderConstructionDialog, {
       panelClass: 'theme-dialog',
       disableClose: true
+    });
+  }
+
+  public openVideoDialog () {
+    this._dialog.open (VideoDialog, {
+      panelClass: 'v-dialog'
     });
   }
 

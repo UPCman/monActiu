@@ -20,6 +20,7 @@ import { DisclaimerDialog } from './components/dialogs/disclaimer/disclaimer_dia
 import { EmailSendDialog } from './components/dialogs/email_send_dialog/email_send_dialog.component';
 import { EmailErrorDialog } from './components/dialogs/email_error/email_error_dialog.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { VideoDialog } from './components/dialogs/video_dialog/video_dialog.component';
 
 export function createTranslateLoader (http: HttpClient) {
   return new TranslateHttpLoader (http, './assets/i18n/', '.json');
@@ -38,6 +39,7 @@ export function createTranslateLoader (http: HttpClient) {
     DisclaimerDialog,
     EmailSendDialog,
     EmailErrorDialog,
+    VideoDialog
   ],
   imports: [
     BrowserModule,
