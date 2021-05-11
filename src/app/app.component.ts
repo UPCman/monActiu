@@ -61,7 +61,7 @@ export class AppComponent {
     // Open under construction dialog
     // this.openUnderConstructionDialog();
     // Open video dialog
-    this.openVideoDialog();
+    // this.openVideoDialog();
   }
 
   public toggleOptions () {
