@@ -86,3 +86,7 @@ APP_SETTINGS_MODULE="config.prod"
 - To kill gunicorn processes:  
 `pkill gunicorn`  
 `pkill -1 gunicorn`
+
+## Versions
+Node version: v10.16.3
+
