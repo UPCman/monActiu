@@ -66,10 +66,12 @@
         </div>
       </div>
       <div class="mobile-hack"></div>
+      <!--
       <div class="contact-form">
         <p>
           <span class="text bold">{{ "contact.formTitle" | translate}} </span>
         </p>
+
         <form [formGroup]="contactForm">
           <input formControlName="name" type="text" placeholder="{{ 'contact.name'| translate }}">
           <input formControlName="phone" type="text" placeholder="{{ 'contact.phoneNumber'| translate }}">
@@ -78,6 +80,7 @@
         </form>
         <button (click)="sendEmail()" [disabled]="!contactForm.valid">{{ 'contact.send'| translate }}</button>
       </div>
+      -->
     </div>
   </div>
   <iframe
